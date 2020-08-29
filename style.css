@@ -1,0 +1,58 @@
+body {
+    margin: 0%;
+}
+.top-bar {
+
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo {
+    background-color: red;
+    display: flex;
+}
+
+.carrito {
+    background-color: antiquewhite;
+    display: flex;
+}
+
+.portada {
+    display: flex;
+    padding: 150px;
+    background-color:yellow;
+}
+
+.seccion-secundaria {
+    display: flex;
+    background-color: blueviolet;
+    flex-direction: row;
+}
+
+.filtros {
+    margin: 20px;
+    padding: 40px;
+}
+
+.productos {
+    margin: 20px;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tarjeta {
+    background-color: yellowgreen;
+    margin: 10px;
+    padding: 50px;
+    flex: 0 1 200px;
+}
+
+footer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
