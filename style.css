@@ -31,14 +31,21 @@ body {
     flex-direction: row;
 }
 
+.control-productos {
+    display: flex;
+    background-color: beige;
+    margin: 20px;
+}
+
 .filtros {
+    background-color: blanchedalmond;
     margin: 20px;
     padding: 40px;
 }
 
 .productos {
-    margin: 20px;
-    padding: 100px;
+    margin-left: 50px;
+    margin-bottom: 50px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -52,7 +59,8 @@ body {
 }
 
 footer {
-    margin-top: 30px;
+    background-color: chartreuse;
+    padding-top: 30px;
     display: flex;
     justify-content: center;
 }
