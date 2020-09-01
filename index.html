@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tienda</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
 </head>
 
 <body>
@@ -28,7 +30,7 @@
     </section>
 
 
-<!--SECCIÓN PRINCIPAL-->
+    <!--SECCIÓN PRINCIPAL-->
 
 
     <section>
@@ -38,14 +40,54 @@
     </section>
 
 
-<!--SECCION SECUNDARIA-->
+    <!--SECCION SECUNDARIA-->
 
 
     <section>
         <div class="seccion-secundaria">
             <div class="filtros">
                 <aside>
-                    <p>soy un aside</p>
+                    <p>Filtros</p>
+                    <p> limpiar</p>
+                    <p> Búsqueda</p>
+                    <input type="text" name="buscador-de-filtros" />
+                    <p>Categoría</p>
+                    <div class="categorías-de-filtros">
+                        <label><input type="checkbox" name="categoría" /> Consolas
+                        </label>
+                        <label><input type="checkbox" name="categoría" />Notebooks
+                        </label>
+                        <label><input type="checkbox" name="categoría" />Cámaras
+                        </label>
+                        <label><input type="checkbox" name="categoría" />Celulares
+                        </label>
+                        <label><input type="checkbox" name="categoría" />Accesorios
+                        </label>
+                    </div>
+
+                    <p>Puntaje</p>
+                    <div class="puntaje-de-filtros">
+                        <label><input type="checkbox" name="puntaje" />
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i> (5)
+                        </label>
+                        <label><input type="checkbox" name="puntaje" />
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="far fa-star"></i> (4)
+                        </label>
+                        <label><input type="checkbox" name="puntaje" />
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="far fa-star"></i> <i class="far fa-star"></i>(3)
+                        </label>
+                        <label><input type="checkbox" name="puntaje" />
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i
+                                class="far fa-star"></i><i class="far fa-star"></i> (2)
+                        </label>
+                        <label><input type="checkbox" name="puntaje" />
+                            <i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i
+                                class="far fa-star"></i><i class="far fa-star"></i> (1)
+                        </label>
+                    </div>
                 </aside>
             </div>
             <div class="lista-productos">
@@ -85,7 +127,7 @@
         </div>
 
 
-<!--FOOTER-->
+        <!--FOOTER-->
 
 
     </section>

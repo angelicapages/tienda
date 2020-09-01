@@ -41,6 +41,20 @@ body {
     background-color: blanchedalmond;
     margin: 20px;
     padding: 40px;
+    flex: 0 1 200px;
+}
+
+.categorías-de-filtros {
+    display: flex;
+    flex-direction: column;
+}
+
+.puntaje-de-filtros {
+
+    display: flex;
+    flex-direction: row;
+    flex: 0 1 10%;
+
 }
 
 .productos {
