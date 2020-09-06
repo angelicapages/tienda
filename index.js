@@ -8,9 +8,9 @@ const filtrarlimpado = () => {
     buscar.value = " "
 
 
-for (let check of checkbox) {
-    console.log (check.checked)
-    check.checked = false
+    for (let check of checkbox) {
+        console.log(check.checked)
+        check.checked = false
     }
 
 }
@@ -20,4 +20,4 @@ limpiando.onclick = () => {
 }
 
 
-console.log (checkbox)
+console.log(checkbox)

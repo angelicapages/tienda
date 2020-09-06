@@ -52,7 +52,7 @@ body {
 .puntaje-de-filtros {
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex: 0 1 10%;
 
 }
