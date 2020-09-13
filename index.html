@@ -15,128 +15,139 @@
 
     <!--BARRA DE NAVEGACION-->
 
+    <div id="menu-hamburguesa" class="hidden" >
+        <p>Carrito</p>
+        <button class="cierre-menu-hamburguesa"> Cerrar</button>
+    </div>
 
-    <section>
+    <div id="overlay" class="hidden">
+    </div>
         <nav>
             <div class="top-bar">
                 <div class="logo">
                     <p>hola</p>
                 </div>
+                <button class="abrir-menu-hamburguesa"> Abrir menú</button>
                 <div class="carrito">
                     <p>hola</p>
                 </div>
             </div>
         </nav>
-    </section>
+        </section>
 
 
-    <!--SECCIÓN PRINCIPAL-->
+        <!--SECCIÓN PRINCIPAL-->
 
 
-    <section>
-        <div class="portada">
-            <p>Electrónica</p>
-        </div>
-    </section>
-
-
-    <!--SECCION SECUNDARIA-->
-
-
-    <section>
-        <div class="seccion-secundaria">
-            <div class="filtros">
-                <aside>
-                    <p>Filtros</p>
-                    <button id="botonLimpiado"><p> limpiar</p></button>
-                    <p> Búsqueda</p>
-                    <input type="text" name="buscador-de-filtros" id="buscador" value="busqueda"/>
-                    <p>Categoría</p>
-                    <div class="categorías-de-filtros">
-                        <label><input type="checkbox" name="categoría" class="checkboxes" /> Consolas
-                        </label>
-                        <label><input type="checkbox" name="categoría" class="checkboxes" />Notebooks
-                        </label>
-                        <label><input type="checkbox" name="categoría" class="checkboxes" />Cámaras
-                        </label>
-                        <label><input type="checkbox" name="categoría" class="checkboxes" />Celulares
-                        </label>
-                        <label><input type="checkbox" name="categoría" class="checkboxes" />Accesorios
-                        </label>
-                    </div>
-
-                    <p>Puntaje</p>
-                    <div class="puntaje-de-filtros">
-                        <label><input type="checkbox" name="puntaje" class="checkboxes" />
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                class="fas fa-star"></i><i class="fas fa-star"></i> (5)
-                        </label>
-                        <label><input type="checkbox" name="puntaje" class="checkboxes" />
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                class="fas fa-star"></i><i class="far fa-star"></i> (4)
-                        </label>
-                        <label><input type="checkbox" name="puntaje" class="checkboxes" />
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                class="far fa-star"></i> <i class="far fa-star"></i>(3)
-                        </label>
-                        <label><input type="checkbox" name="puntaje" class="checkboxes" />
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i
-                                class="far fa-star"></i><i class="far fa-star"></i> (2)
-                        </label>
-                        <label><input type="checkbox" name="puntaje" class="checkboxes" />
-                            <i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i
-                                class="far fa-star"></i><i class="far fa-star"></i> (1)
-                        </label>
-                    </div>
-                </aside>
+        <section>
+            <div class="portada">
+                <p>Electrónica</p>
             </div>
-            <div class="lista-productos">
-                <header class="control-productos">
-                    <p>Soy un header, controlo los productos</p>
-                </header>
-                <div class="productos">
-                    <div class="tarjeta">
-                        <p> Maquetando</p>
-                    </div>
-                    <div class="tarjeta">
-                        <p>Maquetando</p>
-                    </div>
-                    <div class="tarjeta">
-                        <p> Maquetando</p>
-                    </div>
-                    <div class="tarjeta">
-                        <p>Maquetando</p>
-                    </div>
-                    <div class="tarjeta">
-                        <p> Maquetando</p>
-                    </div>
-                    <div class="tarjeta">
-                        <p>Maquetando</p>
-                    </div>
-                    <div class="tarjeta">
-                        <p> Maquetando</p>
-                    </div>
-                    <div class="tarjeta">
-                        <p>Maquetando</p>
-                    </div>
-                    <div class="tarjeta">
-                        <p>Maquetando</p>
+        </section>
+
+
+        <!--SECCION SECUNDARIA-->
+
+
+        <section>
+            <div class="seccion-secundaria">
+                <div class="filtros">
+                    <aside>
+                        <p>Filtros</p>
+                        <button id="botonLimpiado">
+                            <p> limpiar</p>
+                        </button>
+                        <p> Búsqueda</p>
+                        <input type="text" name="buscador-de-filtros" id="buscador" value="busqueda" />
+                        <p>Categoría</p>
+                        <div class="categorías-de-filtros">
+                            <label><input type="checkbox" name="categoría" class="checkboxes" /> Consolas
+                            </label>
+                            <label><input type="checkbox" name="categoría" class="checkboxes" />Notebooks
+                            </label>
+                            <label><input type="checkbox" name="categoría" class="checkboxes" />Cámaras
+                            </label>
+                            <label><input type="checkbox" name="categoría" class="checkboxes" />Celulares
+                            </label>
+                            <label><input type="checkbox" name="categoría" class="checkboxes" />Accesorios
+                            </label>
+                        </div>
+
+                        <p>Puntaje</p>
+                        <div class="puntaje-de-filtros">
+                            <label><input type="checkbox" name="puntaje" class="checkboxes" />
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i> (5)
+                            </label>
+                            <label><input type="checkbox" name="puntaje" class="checkboxes" />
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="far fa-star"></i> (4)
+                            </label>
+                            <label><input type="checkbox" name="puntaje" class="checkboxes" />
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="far fa-star"></i> <i class="far fa-star"></i>(3)
+                            </label>
+                            <label><input type="checkbox" name="puntaje" class="checkboxes" />
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i
+                                    class="far fa-star"></i><i class="far fa-star"></i> (2)
+                            </label>
+                            <label><input type="checkbox" name="puntaje" class="checkboxes" />
+                                <i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i
+                                    class="far fa-star"></i><i class="far fa-star"></i> (1)
+                            </label>
+                        </div>
+                    </aside>
+                </div>
+                <div class="lista-productos">
+                    <header class="control-productos">
+                        <p>Soy un header, controlo los productos</p>
+                    </header>
+                    <div class="productos">
+                        <div class="tarjeta">
+                            <p> Maquetando</p>
+                        </div>
+                        <div class="tarjeta">
+                            <p>Maquetando</p>
+                        </div>
+                        <div class="tarjeta">
+                            <p> Maquetando</p>
+                        </div>
+                        <div class="tarjeta">
+                            <p>Maquetando</p>
+                        </div>
+                        <div class="tarjeta">
+                            <p> Maquetando</p>
+                        </div>
+                        <div class="tarjeta">
+                            <p>Maquetando</p>
+                        </div>
+                        <div class="tarjeta">
+                            <p> Maquetando</p>
+                        </div>
+                        <div class="tarjeta">
+                            <p>Maquetando</p>
+                        </div>
+                        <div class="tarjeta">
+                            <p>Maquetando</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
 
-        <!--FOOTER-->
+            <!--FOOTER-->
 
 
+        </section>
+        <footer>
+            <div class="foot">
+                <p>Soy el footer</p>
+            </div>
+        </footer>
+        <script src="index.js"> </script>
+
+    </div>
     </section>
-    <footer>
-        <div class="foot">
-            <p>Soy el footer</p>
-        </div>
-    </footer>
-    <script src="index.js"> </script>
 </body>
 
 </html>

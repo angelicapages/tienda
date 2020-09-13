@@ -1,10 +1,15 @@
 const limpiando = document.querySelector("#botonLimpiado")
 const buscar = document.querySelector("#buscador")
 const checkbox = document.querySelectorAll(".checkboxes")
+const cerrarMenuHamburguesa = document.querySelector(".cierre-menu-hamburguesa")
+const abrirMenuHamburguesa = document.querySelector(".abrir-menu-hamburguesa")
+const overlay = document.querySelector("#overlay")
+const menuHamburguesa = document.querySelector("#menu-hamburguesa")
+const hidden = document.querySelector (".hidden")
 
 
-
-const filtrarlimpado = () => {
+//BOTON LIMPIADO
+const filtrarlimpiado = () => {
     buscar.value = " "
 
 
@@ -16,8 +21,18 @@ const filtrarlimpado = () => {
 }
 
 limpiando.onclick = () => {
-    filtrarlimpado()
+    filtrarlimpiado()
 }
 
+// CERRAR Y ABRIR EL MENU HAMBURGUESA
 
-console.log(checkbox)
+abrirMenuHamburguesa.onclick = () => {
+    menuHamburguesa.classList.remove ("hidden");
+    overlay.classList.remove ("hidden")
+}
+
+cerrarMenuHamburguesa.onclick = () => {
+    menuHamburguesa.classList.add ("hidden")
+    overlay.classList.add ("hidden")
+}
+
