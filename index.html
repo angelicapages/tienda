@@ -16,11 +16,112 @@
 
     <!--BARRA DE NAVEGACION-->
 
-    <div id="menu-hamburguesa" class="hidden">
-        <p>Carrito</p>
-        <button class="cierre-menu-hamburguesa"> Cerrar</button>
+    <!--CARRITO OCULTO-->
+    <div id="overlay2" class="hidden">
+        <div id="menu-hamburguesa" class="hidden">
+            <header class="titulo-carrito">
+                <h2>Carrito</h2>
+                <button class="cierre-menu-hamburguesa"><i class="fas fa-times"></i> </button>
+            </header>
+            <p>2 producto(s) agregado(s)</p>
+
+            <div class="carro">
+                <article class="producto-dentro-carrito">
+                    <div class="contenedor-carrito">
+                        <img id="celular-xiaomi" src="img/celulcar xiaomi.jpg">
+                        <div class="descripcion-producto-carrito">
+                            <div class="nombre-carrito">
+                                <h3>Celular Xiaomi</h3>
+                                <div class="icono-trash">
+                                    <i class="fas fa-trash"></i>
+                                </div>
+                            </div>
+                            <div class="cantidad-precio">
+                                <div class="cantidad-producto-carrito">
+                                    <input class="input-de-carrito" type="number" value="1">
+                                    </input>
+                                </div>
+                                <div class="precio-de-producto-carrito">
+                                    <p>$32999</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto-dentro-carrito">
+                    <div class="contenedor-carrito">
+                        <img id="notebook-asus" src="img/notebook asus.jpg">
+                        <div class="descripcion-producto-carrito">
+                            <div class="nombre-carrito">
+                                <h3>Notebook ASUS</h3>
+                                <div class="icono-trash">
+                                    <i class="fas fa-trash"></i>
+                                </div>
+                            </div>
+                            <div class="cantidad-precio">
+                                <div class="cantidad-producto-carrito">
+                                    <input class="input-de-carrito" type="number" value="1">
+                                    </input>
+                                </div>
+                                <div class="precio-de-producto-carrito">
+                                    <p>$22499</p>
+                                </div>
+                            </div>
+                        </div>
+                </article>
+            </div>
+            <p class="subtotal-carrito">Subtotal: $55498 </p>
+            <div class="botones-carrito">
+                <button class="comprar-carrito">Comprar</button>
+                <button class="vaciar-carrito">Vaciar</button>
+            </div>
+        </div>
     </div>
 
+    <div class="contador-compra">
+        <h2>Checkout</h2>
+        <div class="contador-interior">
+
+            <div class="datos-personales-opciones-de-pago">
+
+                <div class="datos-personales">
+                    <h3>Datos Personales</h3>
+                    <div class="input-personales">
+                        <label>Nombre y apellido
+                            <input type="text" placeholder="p.ej Angélica Pagés" class="input-datos-personales"></label>
+                    </div>
+                    <div class="input-personales">
+                        <label>Gmail
+                            <input type="email" placeholder="p.ej AngelShop@gmail.com"
+                                class="input-datos-personales"></label>
+                    </div>
+                </div>
+                <div class="opciones-de-pago">
+                    <h3>Opciones de pago</h3>
+                    <form class="formulario-contador">
+                        <label><input type="radio" name="opciones-de-pago">Efectivo/Débito</label>
+                        <label><input type="radio" name="opciones-de-pago">Tarjeta de crédito</label>
+                        <label><input type="checkbox" name="opciones-de-pago">Necesito envío</label>
+                        <label><input type="checkbox" name="opciones-de-pago">Tengo tarjeta de descuento</label>
+                    </form>
+                </div>
+            </div>
+            <div class="contenedor-contador">
+                <div class="resumen">
+                    <h3>Resumen</h3>
+                </div>
+                    <div class="cuentas">
+                    <p id="subtotal"> $55498</p>
+                    <p id="total"> $55498</p>
+                
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--OVERLAY-->
     <div id="overlay" class="hidden">
     </div>
 
@@ -111,62 +212,98 @@
 
             <div class="lista-productos">
                 <header class="control-productos">
-                    <p>Soy un header, controlo los productos</p>
+                    <div class="contenedor-cantidad-productos">
+                        <p id="cantidad-de-productos">Mostrando 12 producto(s) de 12</p>
+                    </div>
+                    <div class="control">
+                        <p class="control"> Ver como</p>
+                    </div>
                 </header>
 
                 <div class="productos">
+
                     <article class="tarjeta">
                         <div class="imagen-de-producto">
-                            <img src="img/celulcar xiaomi.jpg">
-                            </div>
+                            <img class="imagen-producto" src="img/celulcar xiaomi.jpg">
                         </div>
-                        <p>Maquetando</p>
+                        <h3>Celular Xiaomi</h3>
                     </article>
+
                     <article class="tarjeta">
                         <div class="imagen-de-producto">
-                        <img src="img/ps4.jpg">
-                    </div>
-                        <p>Maquetando</p>
+                            <img class="imagen-producto" src="img/ps4.jpg">
+                        </div>
+                        <h3>PlayStation 4</h3>
                     </article>
+
                     <article class="tarjeta">
-                        <div class="imagen-de-producto"></div>
-                        <p> Maquetando</p>
+                        <div class="imagen-de-producto">
+                            <img class="imagen-producto" src="img/camara nikon.jpg">
+                        </div>
+                        <h3>Cámara Nikon</h3>
                     </article>
+
                     <article class="tarjeta">
-                        <div class="imagen-de-producto"></div>
-                        <p>Maquetando</p>
+                        <div class="imagen-de-producto">
+                            <img class="imagen-producto" src="img/headphones_sony-removebg-preview.png">
+                        </div>
+                        <h3>Headphones Sony</h3>
                     </article>
+
                     <article class="tarjeta">
-                        <div class="imagen-de-producto"></div>
-                        <p> Maquetando</p>
+                        <div class="imagen-de-producto">
+                            <img class="imagen-producto" src="img/nintendo switch.jpg">
+                        </div>
+                        <h3>Nintendo Switch</h3>
                     </article>
+
                     <article class="tarjeta">
-                        <div class="imagen-de-producto"></div>
-                        <p>Maquetando</p>
+                        <div class="imagen-de-producto">
+                            <img class="imagen-producto" src="img/notebook_asus-removebg-preview.png">
+                        </div>
+                        <h3>Notebook ASUS</h3>
                     </article>
+
                     <article class="tarjeta">
-                        <div class="imagen-de-producto"></div>
-                        <p> Maquetando</p>
+                        <div class="imagen-de-producto">
+                            <img class="imagen-producto" src="img/notebook_msi-removebg-preview.png">
+                        </div>
+                        <h3>Notebook MSI</h3>
                     </article>
+
                     <article class="tarjeta">
-                        <div class="imagen-de-producto"></div>
-                        <p>Maquetando</p>
+                        <div class="imagen-de-producto">
+                            <img class="imagen-producto" src="img/headphones_phillips-removebg-preview.png">
+                        </div>
+                        <h3>Headphones Phillips</h3>
                     </article>
+
                     <article class="tarjeta">
-                        <div class="imagen-de-producto"></div>
-                        <p>Maquetando</p>
+                        <div class="imagen-de-producto">
+                            <img class="imagen-producto" src="img/macbook-removebg-preview.png">
+                        </div>
+                        <h3>Macbook</h3>
                     </article>
+
                     <article class="tarjeta">
-                        <div class="imagen-de-producto"></div>
-                        <p> Maquetando</p>
+                        <div class="imagen-de-producto">
+                            <img class="imagen-producto" src="img/iphone.jpg">
+                        </div>
+                        <h3>Iphone</h3>
                     </article>
+
                     <article class="tarjeta">
-                        <div class="imagen-de-producto"></div>
-                        <p>Maquetando</p>
+                        <div class="imagen-de-producto">
+                            <img class="imagen-producto" src="img/xbox one.jpg">
+                        </div>
+                        <h3>Xbox one</h3>
                     </article>
+
                     <article class="tarjeta">
-                        <div class="imagen-de-producto"></div>
-                        <p>Maquetando</p>
+                        <div class="imagen-de-producto">
+                            <img class="imagen-producto" src="img/mouse gamer.jpg">
+                        </div>
+                        <h3>Mouse gamer</h3>
                     </article>
                 </div>
             </div>
@@ -182,10 +319,11 @@
             <p>Soy el footer</p>
         </div>
     </footer>
-    <script src="index.js"> </script>
 
     </div>
     </section>
+
+    <script src="index.js"> </script>
 </body>
 
 </html>

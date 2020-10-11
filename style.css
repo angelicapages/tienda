@@ -1,89 +1,258 @@
 body {
-    margin: 0%;
-    font-family: 'Montserrat', sans-serif;
+  margin: 0%;
+  font-family: "Montserrat", sans-serif;
 }
 
 #overlay {
-    position: fixed;
-    z-index: 1;
-    background-color: rgba(12, 12, 12, 0.75);
-    width: 1000vh;
-    height: 100vh;
+  position: fixed;
+  z-index: 2;
+  background-color: rgba(12, 12, 12, 0.75);
+  width: 1000vh;
+  height: 100vh;
+}
+
+#overlay2 {
+  position: fixed;
+  z-index: 4;
+  background-color: rgba(12, 12, 12, 0.75);
+  width: 1000vh;
+  height: 100vh;
 }
 
 .hidden {
-    display: none;
+  display: none;
+}
+
+#menu-hamburguesa {
+  padding: 20px;
+  position: fixed;
+  right: 0%;
+  z-index: 3;
+  background-color: #ffffff;
+  width: 50vh;
+  height: 100vh;
+}
+.titulo-carrito {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cierre-menu-hamburguesa {
+  justify-content: space-between;
+  border: none;
+  background-color: transparent;
+}
+.carro {
+  overflow: scroll;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.contenedor-carrito {
+  display: flex;
+  flex-direction: row;
+}
+.nombre-carrito {
+  display: flex;
+  align-items: center;
+}
+
+.descripcion-producto-carrito {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.icono-trash {
+  position: absolute;
+  right: 50px;
+}
+
+#notebook-asus {
+  height: 100px;
+}
+
+#celular-xiaomi {
+  height: 100px;
+}
+
+.input-de-carrito {
+  width: 25px;
+}
+
+.cantidad-precio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.botones-carrito {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.comprar-carrito {
+  font-family: "Montserrat", sans-serif;
+  font-size: medium;
+  margin: 5px;
+  background-color: #73a942;
+  color: #ffffff;
+  height: 50px;
+  width: 390px;
+  border-radius: 5px;
+  border: none;
+}
+
+.vaciar-carrito {
+  font-family: "Montserrat", sans-serif;
+  font-size: medium;
+  margin: 5px;
+  background-color: transparent;
+  color: red;
+  height: 50px;
+  width: 390px;
+  border-radius: 5px;
+  border-color: red;
+}
+
+.vaciar-carrito:hover {
+  color: #ffffff;
+  background-color: red;
+}
+
+/*CONTADOR CARRITO*/
+.contador-compra {
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  height: 100vh;
+}
+
+.contador-interior {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+.datos-personales-opciones-de-pago {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 20px;
+}
+
+.datos-personales {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-personales {
+  margin-top: 20px;
+}
+
+.input-datos-personales {
+  display: block;
+  border: 0;
+  border-bottom: 1px solid slategray;
+  margin-top: 10px;
+}
+
+.opciones-de-pago {
+  margin-top: 30px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.formulario-contador {
+  display: flex;
+  flex-direction: column;
+}
+
+.contenedor-contador{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  flex-direction: column;
+  background-color: #73a942;
+  justify-content: space-between;
+}
+.cuentas{
+  display: flex;
+  flex-direction: column;
+}
+#total {
+  font-size: 30px;
+  font-weight: bolder;
 }
 
 /*HEADER*/
 
 .top-bar {
-
-    background-color: white;
-    display: flex;
-    height: 80px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  background-color: white;
+  display: flex;
+  height: 80px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-    background-color:white;
-    display: flex;
-}
-
-#menu-hamburguesa {
-    position: fixed;
-    right: 0%;
-    z-index: 2;
-    background-color: chartreuse;
-    width: 50vh;
-    height: 100vh;
+  background-color: white;
+  display: flex;
 }
 
 .abrir-menu-hamburguesa {
-    border: none;
-    margin-right: 40px;
-    display: flex;
-    align-items: center;
-    background-color: transparent;
-    border: none;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    font-weight: lighter;
+  border: none;
+  margin-right: 40px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: lighter;
 }
 
 .portada {
-    display: flex;
-    position: relative;
-    min-height: 300px;
-    background-image: url("img/hacer-home-office.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  position: relative;
+  min-height: 300px;
+  background-image: url("img/hacer-home-office.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
-    position: relative;
-    z-index: 1;
-    font-size: 35px;
-    font-weight: bolder;
-    color: #ffffff;
+  position: relative;
+  z-index: 1;
+  font-size: 35px;
+  font-weight: bolder;
+  color: #ffffff;
 }
 
 .banner {
-    position: relative;
+  position: relative;
 }
 .overlay-banner {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(12, 12, 12, 0.100);
-
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(12, 12, 12, 0.1);
 }
 
 /*SECCION PRINCIPAL*/
@@ -91,85 +260,103 @@ h1 {
 /*FILTROS*/
 
 main {
-    padding-top: 80px;
-    display: flex;
-    background-color: #f5f5f5;
-    flex-direction: row;
+  padding-top: 80px;
+  display: flex;
+  background-color: #f5f5f5;
+  flex-direction: row;
 }
 
 .control-productos {
-    display: flex;
-    background-color:white;
-    padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 20px;
+  margin-right: 10%;
 }
 
 .filtros {
-    background-color: transparent;
-    margin-right: 20px;
-    margin-left: 20px;
-    padding: 40px;
-    flex: 0 1 200px;
+  background-color: transparent;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding: 40px;
+  flex: 0 1 200px;
 }
 
 .titulo-de-filtros {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .titulos-filtros {
-    font-size: large;
-    font-weight: bold;
+  font-size: large;
+  font-weight: bold;
 }
 
 #botonLimpiado {
-    background-color: transparent;
-    border: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-family:  'Montserrat', sans-serif;
-    font-weight: lighter;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
 }
 
 .categorías-de-filtros {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .puntaje-de-filtros {
-    display: flex;
-    flex-direction: column;
-    flex: 0 1 10%;
-
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 10%;
 }
 
 /*PRODUCTOS*/
 
+.control {
+  display: flex;
+  justify-content: end;
+}
 .productos {
-    margin-left: 50px;
-    margin-bottom: 50px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .tarjeta {
-    background-color: yellowgreen;
-    margin: 10px;
-    padding: 50px;
-    flex: 0 1 200px;
+  height: 400px;
+  background-color: #ffffff;
+  margin: 10px;
+  margin-top: 30px;
+  padding: 5px;
+}
+
+.imagen-de-producto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  width: 350px;
+  overflow: hidden;
+}
+
+.imagen-producto {
+  height: 250px;
+}
+
+h3 {
+  text-align: center;
 }
 
 /*FOOTER*/
 
 footer {
-    background-color: chartreuse;
-    padding-top: 30px;
-    display: flex;
-    justify-content: center;
+  background-color: chartreuse;
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
 }
-
-
-
