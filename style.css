@@ -11,7 +11,7 @@ body {
   height: 100vh;
 }
 
-#overlay2 {
+#overlay2{
   position: fixed;
   z-index: 4;
   background-color: rgba(12, 12, 12, 0.75);
@@ -93,6 +93,7 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
 .comprar-carrito {
   font-family: "Montserrat", sans-serif;
   font-size: medium;
@@ -124,9 +125,12 @@ body {
 
 /*CONTADOR CARRITO*/
 .contador-compra {
+  z-index: 5;
+  position: fixed;
+  left: 25%;
   padding-left: 30px;
   padding-right: 30px;
-  background-color: aqua;
+  background-color:#ffffff;
   display: flex;
   flex-direction: column;
   max-width: 600px;
@@ -175,24 +179,52 @@ body {
   flex-direction: column;
 }
 
-.contenedor-contador{
+.contenedor-contador {
   display: flex;
   height: 100%;
   width: 100%;
   padding-left: 20px;
   padding-right: 20px;
-
   flex-direction: column;
-  background-color: #73a942;
+  background-color: #f5f5f5;
   justify-content: space-between;
 }
-.cuentas{
+.cuentas {
   display: flex;
   flex-direction: column;
 }
 #total {
   font-size: 30px;
   font-weight: bolder;
+}
+
+.botones-pago {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+}
+
+.seguir-comprando{
+  font-family: "Montserrat", sans-serif;
+  font-size: medium;
+  margin: 5px;
+  background-color: transparent;
+  height: 50px;
+  width: 390px;
+  border-radius: 5px;
+  border-color:#f5f5f5;
+}
+
+.finalizar{
+  font-family: "Montserrat", sans-serif;
+  font-size: medium;
+  margin: 5px;
+  background-color: #73a942;
+  color: #ffffff;
+  height: 50px;
+  width: 390px;
+  border-radius: 5px;
+  border: none;
 }
 
 /*HEADER*/

@@ -17,106 +17,111 @@
     <!--BARRA DE NAVEGACION-->
 
     <!--CARRITO OCULTO-->
-    <div id="overlay2" class="hidden">
-        <div id="menu-hamburguesa" class="hidden">
-            <header class="titulo-carrito">
-                <h2>Carrito</h2>
-                <button class="cierre-menu-hamburguesa"><i class="fas fa-times"></i> </button>
-            </header>
-            <p>2 producto(s) agregado(s)</p>
 
-            <div class="carro">
-                <article class="producto-dentro-carrito">
-                    <div class="contenedor-carrito">
-                        <img id="celular-xiaomi" src="img/celulcar xiaomi.jpg">
-                        <div class="descripcion-producto-carrito">
-                            <div class="nombre-carrito">
-                                <h3>Celular Xiaomi</h3>
-                                <div class="icono-trash">
-                                    <i class="fas fa-trash"></i>
-                                </div>
+    <div id="menu-hamburguesa" class="hidden">
+        <header class="titulo-carrito">
+            <h2>Carrito</h2>
+            <button class="cierre-menu-hamburguesa"><i class="fas fa-times"></i> </button>
+        </header>
+        <p>2 producto(s) agregado(s)</p>
+
+        <div class="carro">
+            <article class="producto-dentro-carrito">
+                <div class="contenedor-carrito">
+                    <img id="celular-xiaomi" src="img/celulcar xiaomi.jpg">
+                    <div class="descripcion-producto-carrito">
+                        <div class="nombre-carrito">
+                            <h3>Celular Xiaomi</h3>
+                            <div class="icono-trash">
+                                <i class="fas fa-trash"></i>
                             </div>
-                            <div class="cantidad-precio">
-                                <div class="cantidad-producto-carrito">
-                                    <input class="input-de-carrito" type="number" value="1">
-                                    </input>
-                                </div>
-                                <div class="precio-de-producto-carrito">
-                                    <p>$32999</p>
-                                </div>
+                        </div>
+                        <div class="cantidad-precio">
+                            <div class="cantidad-producto-carrito">
+                                <input class="input-de-carrito" type="number" value="1">
+                                </input>
+                            </div>
+                            <div class="precio-de-producto-carrito">
+                                <p>$32999</p>
                             </div>
                         </div>
                     </div>
-                </article>
+                </div>
+            </article>
 
-                <article class="producto-dentro-carrito">
-                    <div class="contenedor-carrito">
-                        <img id="notebook-asus" src="img/notebook asus.jpg">
-                        <div class="descripcion-producto-carrito">
-                            <div class="nombre-carrito">
-                                <h3>Notebook ASUS</h3>
-                                <div class="icono-trash">
-                                    <i class="fas fa-trash"></i>
-                                </div>
-                            </div>
-                            <div class="cantidad-precio">
-                                <div class="cantidad-producto-carrito">
-                                    <input class="input-de-carrito" type="number" value="1">
-                                    </input>
-                                </div>
-                                <div class="precio-de-producto-carrito">
-                                    <p>$22499</p>
-                                </div>
+            <article class="producto-dentro-carrito">
+                <div class="contenedor-carrito">
+                    <img id="notebook-asus" src="img/notebook asus.jpg">
+                    <div class="descripcion-producto-carrito">
+                        <div class="nombre-carrito">
+                            <h3>Notebook ASUS</h3>
+                            <div class="icono-trash">
+                                <i class="fas fa-trash"></i>
                             </div>
                         </div>
-                </article>
-            </div>
-            <p class="subtotal-carrito">Subtotal: $55498 </p>
-            <div class="botones-carrito">
-                <button class="comprar-carrito">Comprar</button>
-                <button class="vaciar-carrito">Vaciar</button>
-            </div>
+                        <div class="cantidad-precio">
+                            <div class="cantidad-producto-carrito">
+                                <input class="input-de-carrito" type="number" value="1">
+                                </input>
+                            </div>
+                            <div class="precio-de-producto-carrito">
+                                <p>$22499</p>
+                            </div>
+                        </div>
+                    </div>
+            </article>
+        </div>
+        <p class="subtotal-carrito">Subtotal: $55498 </p>
+        <div class="botones-carrito">
+            <button class="comprar-carrito">Comprar</button>
+            <button class="vaciar-carrito">Vaciar</button>
         </div>
     </div>
 
-    <div class="contador-compra">
-        <h2>Checkout</h2>
-        <div class="contador-interior">
+    <div id="menu-hamburguesa2" class="hidden">
+        <div class="contador-compra">
+            <h2>Checkout</h2>
+            <div class="contador-interior">
 
-            <div class="datos-personales-opciones-de-pago">
+                <div class="datos-personales-opciones-de-pago">
 
-                <div class="datos-personales">
-                    <h3>Datos Personales</h3>
-                    <div class="input-personales">
-                        <label>Nombre y apellido
-                            <input type="text" placeholder="p.ej Angélica Pagés" class="input-datos-personales"></label>
+                    <div class="datos-personales">
+                        <h3>Datos Personales</h3>
+                        <div class="input-personales">
+                            <label>Nombre y apellido
+                                <input type="text" placeholder="p.ej Angélica Pagés"
+                                    class="input-datos-personales"></label>
+                        </div>
+                        <div class="input-personales">
+                            <label>Gmail
+                                <input type="email" placeholder="p.ej AngelShop@gmail.com"
+                                    class="input-datos-personales"></label>
+                        </div>
                     </div>
-                    <div class="input-personales">
-                        <label>Gmail
-                            <input type="email" placeholder="p.ej AngelShop@gmail.com"
-                                class="input-datos-personales"></label>
+                    <div class="opciones-de-pago">
+                        <h3>Opciones de pago</h3>
+                        <form class="formulario-contador">
+                            <label><input type="radio" name="opciones-de-pago">Efectivo/Débito</label>
+                            <label><input type="radio" name="opciones-de-pago">Tarjeta de crédito</label>
+                            <label><input type="checkbox" name="opciones-de-pago">Necesito envío</label>
+                            <label><input type="checkbox" name="opciones-de-pago">Tengo tarjeta de descuento</label>
+                        </form>
                     </div>
                 </div>
-                <div class="opciones-de-pago">
-                    <h3>Opciones de pago</h3>
-                    <form class="formulario-contador">
-                        <label><input type="radio" name="opciones-de-pago">Efectivo/Débito</label>
-                        <label><input type="radio" name="opciones-de-pago">Tarjeta de crédito</label>
-                        <label><input type="checkbox" name="opciones-de-pago">Necesito envío</label>
-                        <label><input type="checkbox" name="opciones-de-pago">Tengo tarjeta de descuento</label>
-                    </form>
-                </div>
-            </div>
-            <div class="contenedor-contador">
-                <div class="resumen">
-                    <h3>Resumen</h3>
-                </div>
+                <div class="contenedor-contador">
+                    <div class="resumen">
+                        <h3>Resumen</h3>
+                    </div>
                     <div class="cuentas">
-                    <p id="subtotal"> $55498</p>
-                    <p id="total"> $55498</p>
-                
-            </div>
+                        <p id="subtotal"> $55498</p>
+                        <p id="total"> $55498</p>
+                    </div>
 
+                </div>
+            </div>
+            <div class="botones-pago">
+                <button class="seguir-comprando">Seguir comprando</button>
+                <button class="finalizar">Finalizar</button>
             </div>
         </div>
     </div>
@@ -124,7 +129,8 @@
     <!--OVERLAY-->
     <div id="overlay" class="hidden">
     </div>
-
+    <div id="overlay2" class="hidden">
+    </div>
     <nav>
         <div class="top-bar">
             <div class="logo">
