@@ -11,6 +11,9 @@ const hidden = document.querySelector(".hidden")
 const comprar = document.querySelector(".comprar-carrito")
 const checkout = document.querySelector("#menu-hamburguesa2")
 const overlay2 =document.querySelector("#overlay2")
+const seguirComprando =document.querySelector(".seguir-comprando")
+
+
 //BOTON LIMPIADO
 
 const filtrarlimpiado = () => {
@@ -45,3 +48,7 @@ comprar.onclick = () => {
     overlay2.classList.remove("hidden")
 }
 
+seguirComprando.onclick = () => {
+    checkout.classList.add("hidden")
+    overlay2.classList.add("hidden")
+}
