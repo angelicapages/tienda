@@ -89,8 +89,7 @@
                         <h3>Datos Personales</h3>
                         <div class="input-personales">
                             <label>Nombre y apellido
-                                <input type="text" placeholder="p.ej Pepo Shop"
-                                    class="input-datos-personales"></label>
+                                <input type="text" placeholder="p.ej Pepo Shop" class="input-datos-personales"></label>
                         </div>
                         <div class="input-personales">
                             <label>Gmail
@@ -101,10 +100,14 @@
                     <div class="opciones-de-pago">
                         <h3>Opciones de pago</h3>
                         <form class="formulario-contador">
-                            <label><input type="radio" id="efectivo" class="formasDePago" name="opciones-de-pago">Efectivo/Débito</label>
-                            <label><input type="radio" id="credito" class="formasDePago" name="opciones-de-pago">Tarjeta de crédito</label>
-                            <label><input type="checkbox" id="envioChecked"  class="formasDePago" name="opciones-de-pago">Necesito envío</label>
-                            <label><input type="checkbox" id="descuentoChecked" class="formasDePago"  name="opciones-de-pago">Tengo tarjeta de descuento</label>
+                            <label><input type="radio" id="efectivo" class="formasDePago"
+                                    name="opciones-de-pago">Efectivo/Débito</label>
+                            <label><input type="radio" id="credito" class="formasDePago" name="opciones-de-pago">Tarjeta
+                                de crédito</label>
+                            <label><input type="checkbox" id="envioChecked" class="formasDePago"
+                                    name="opciones-de-pago">Necesito envío</label>
+                            <label><input type="checkbox" id="descuentoChecked" class="formasDePago"
+                                    name="opciones-de-pago">Tengo tarjeta de descuento</label>
                         </form>
                     </div>
                 </div>
@@ -115,7 +118,7 @@
                     <div class="cuentas">
                         <h4>Recargo: <span id="recargo">0</span></h4>
                         <h4>Descuento: <span id="descuento">0</span></h4>
-                        <h4>Envio: <span id="envio">0</span></h4>            
+                        <h4>Envio: <span id="envio">0</span></h4>
                         <h4>Precio<span id="subtotal" data-precio="55498"> $55498</span></h4>
                         <p id="total"> $55498</p>
                     </div>
@@ -195,23 +198,23 @@
 
                     <p class="titulos-filtros">Puntaje</p>
                     <div class="puntaje-de-filtros">
-                        <label><input type="checkbox" name="puntaje" class="checkboxes" />
+                        <label><input type="checkbox" name="puntaje" class="checkboxes" value="5" />
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                 class="fas fa-star"></i><i class="fas fa-star"></i> (5)
                         </label>
-                        <label><input type="checkbox" name="puntaje" class="checkboxes" />
+                        <label><input type="checkbox" name="puntaje" class="checkboxes" value="4" />
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                 class="fas fa-star"></i><i class="far fa-star"></i> (4)
                         </label>
-                        <label><input type="checkbox" name="puntaje" class="checkboxes" />
+                        <label><input type="checkbox" name="puntaje" class="checkboxes" value="3" />
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                 class="far fa-star"></i> <i class="far fa-star"></i>(3)
                         </label>
-                        <label><input type="checkbox" name="puntaje" class="checkboxes" />
+                        <label><input type="checkbox" name="puntaje" class="checkboxes" value="2" />
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i
                                 class="far fa-star"></i><i class="far fa-star"></i> (2)
                         </label>
-                        <label><input type="checkbox" name="puntaje" class="checkboxes" />
+                        <label><input type="checkbox" name="puntaje" class="checkboxes" value="1" />
                             <i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i
                                 class="far fa-star"></i><i class="far fa-star"></i> (1)
                         </label>
@@ -231,84 +234,84 @@
 
                 <div class="productos">
 
-                    <article class="tarjeta">
+                    <article class="tarjeta" data-puntaje="3">
                         <div class="imagen-de-producto">
                             <img class="imagen-producto" src="img/celulcar xiaomi.jpg">
                         </div>
                         <h3>Celular Xiaomi</h3>
                     </article>
 
-                    <article class="tarjeta">
+                    <article class="tarjeta" data-puntaje="5">
                         <div class="imagen-de-producto">
                             <img class="imagen-producto" src="img/ps4.jpg">
                         </div>
                         <h3>PlayStation 4</h3>
                     </article>
 
-                    <article class="tarjeta">
+                    <article class="tarjeta" data-puntaje="2">
                         <div class="imagen-de-producto">
                             <img class="imagen-producto" src="img/camara nikon.jpg">
                         </div>
                         <h3>Cámara Nikon</h3>
                     </article>
 
-                    <article class="tarjeta">
+                    <article class="tarjeta" data-puntaje="3">
                         <div class="imagen-de-producto">
                             <img class="imagen-producto" src="img/headphones_sony-removebg-preview.png">
                         </div>
                         <h3>Headphones Sony</h3>
                     </article>
 
-                    <article class="tarjeta">
+                    <article class="tarjeta" data-puntaje="5">
                         <div class="imagen-de-producto">
                             <img class="imagen-producto" src="img/nintendo switch.jpg">
                         </div>
                         <h3>Nintendo Switch</h3>
                     </article>
 
-                    <article class="tarjeta">
+                    <article class="tarjeta" data-puntaje="1">
                         <div class="imagen-de-producto">
                             <img class="imagen-producto" src="img/notebook_asus-removebg-preview.png">
                         </div>
                         <h3>Notebook ASUS</h3>
                     </article>
 
-                    <article class="tarjeta">
+                    <article class="tarjeta" data-puntaje="3">
                         <div class="imagen-de-producto">
                             <img class="imagen-producto" src="img/notebook_msi-removebg-preview.png">
                         </div>
                         <h3>Notebook MSI</h3>
                     </article>
 
-                    <article class="tarjeta">
+                    <article class="tarjeta" data-puntaje="2">
                         <div class="imagen-de-producto">
                             <img class="imagen-producto" src="img/headphones_phillips-removebg-preview.png">
                         </div>
                         <h3>Headphones Phillips</h3>
                     </article>
 
-                    <article class="tarjeta">
+                    <article class="tarjeta" data-puntaje="4">
                         <div class="imagen-de-producto">
                             <img class="imagen-producto" src="img/macbook-removebg-preview.png">
                         </div>
                         <h3>Macbook</h3>
                     </article>
 
-                    <article class="tarjeta">
+                    <article class="tarjeta" data-puntaje="3">
                         <div class="imagen-de-producto">
                             <img class="imagen-producto" src="img/iphone.jpg">
                         </div>
                         <h3>Iphone</h3>
                     </article>
 
-                    <article class="tarjeta">
+                    <article class="tarjeta" data-puntaje="4">
                         <div class="imagen-de-producto">
                             <img class="imagen-producto" src="img/xbox one.jpg">
                         </div>
                         <h3>Xbox one</h3>
                     </article>
 
-                    <article class="tarjeta">
+                    <article class="tarjeta" data-puntaje="5">
                         <div class="imagen-de-producto">
                             <img class="imagen-producto" src="img/mouse gamer.jpg">
                         </div>

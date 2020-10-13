@@ -2,7 +2,7 @@
 //QUERYSELECTORS
 const limpiando = document.querySelector("#botonLimpiado")
 const buscar = document.querySelector("#buscador")
-const checkbox = document.querySelectorAll(".checkboxes")
+const checkboxes = document.querySelectorAll(".checkboxes")
 const cerrarMenuHamburguesa = document.querySelector(".cierre-menu-hamburguesa")
 const abrirMenuHamburguesa = document.querySelector(".abrir-menu-hamburguesa")
 const overlay = document.querySelector("#overlay")
@@ -22,13 +22,13 @@ const efectivo = document.querySelector("#efectivo")
 const credito = document.querySelector("#credito")
 const envioSiNo = document.querySelector("#envioChecked")
 const tarjetaDescuento = document.querySelector("#descuentoChecked")
+const tarjetas = document.querySelectorAll(".tarjeta")
 
-console.log
 //BOTON LIMPIADO
 
 const filtrarlimpiado = () => {
     buscar.value = " "
-    for (let check of checkbox) {
+    for (let check of checkboxes) {
         console.log(check.checked)
         check.checked = false
     }
@@ -37,6 +37,115 @@ const filtrarlimpiado = () => {
 
 limpiando.onclick = () => {
     filtrarlimpiado()
+}
+
+//FILTROS
+
+const pasaFiltrosTodos = (card) => {
+    if (pasaFiltrosCheckBox(card) ) {
+        console.log("hola pepo")
+        return true
+    }
+    else {
+        console.log("no")
+        return false
+    }
+}
+
+const hayAlgunCheckBoxChequeado = () => {
+    for (let checkbox of checkboxes) {
+        if (checkbox.checked) {
+            console.log("estoy chequeado")
+            return true
+        }
+    }
+    console.log("no está chequeado")
+    return false
+}
+
+const compararCheckBoxChequeado = (card) => {
+    for (let checkbox of checkboxes) {
+        if (checkbox.checked) {
+            if (checkbox.value === card.dataset.puntaje) {
+                console.log("hay uno que coincide")
+                return true
+            }
+        }
+    }
+    return false
+}
+
+
+const pasaFiltrosCheckBox = (card) => {
+    if (hayAlgunCheckBoxChequeado()) {
+        if (compararCheckBoxChequeado(card)) {
+            console.log("Pasa filtros")
+            return true
+        }
+        else {
+            return false
+        }
+    }
+    else {
+        return true
+    }
+}
+
+// const hayAlgoEscritoEnElInput = () => {
+//     if (filtroBusqueda.value) {
+//         return true
+//     }
+//     else {
+//         return false
+//     }
+// }
+
+// const compararInputConTarjeta = (card) => {
+//     if (card.dataset.nombre.includes(filtroBusqueda.value.toLowerCase())) {
+//         return true
+//     }
+//     else {
+//         return false
+//     }
+// }
+
+// const pasaFiltrosInput = (card) => {
+//     if (hayAlgoEscritoEnElInput()) {
+//         if (compararInputConTarjeta(card)) {
+//             return true
+//         }
+//         else {
+//             return false
+//         }
+//     }
+//     else {
+//         return true
+//     }
+// }
+
+const ocultarTarjeta = (card) => {
+    return card.classList.add("hidden")
+}
+
+const mostrarTarjeta = (card) => {
+    return card.classList.remove("hidden")
+}
+
+const filtrarTarjetasPorCheckbox = () => {
+    for (let card of tarjetas) {
+        if (pasaFiltrosCheckBox(card) && pasaFiltrosTodos(card)) {
+            mostrarTarjeta(card)
+        }
+        else {
+            ocultarTarjeta(card)
+        }
+    }
+}
+
+for (let checkbox of checkboxes) {
+    checkbox.oninput = () => {
+        filtrarTarjetasPorCheckbox()
+    }
 }
 
 // CERRAR Y ABRIR EL MENU HAMBURGUESA
@@ -64,16 +173,19 @@ seguirComprando.onclick = () => {
 }
 
 //CALCULOS DE PRECIO EN CARRITO
+
+//Establezco el precio
 let subtotalCompra = Number(subtotal.dataset.precio)
 
-console.log(subtotalCompra)
-
+//Cada vez que alguno de los inputs de las opciones de pago es seleccionado, se ejecutará el calculo total
 for (let opcion of formasDePago) {
     opcion.oninput = () => {
         calculototal()
     }
 }
 
+
+//cargoTarjeta, donde se hace la cuenta individual
 let precioRecargo
 
 const cargoTarjeta = () => {
@@ -82,6 +194,7 @@ const cargoTarjeta = () => {
     return precioRecargo
 }
 
+//precioEnvio, donde se hace la cuenta individual
 let precioEnvio
 
 const cargoEnvio = () => {
@@ -90,6 +203,7 @@ const cargoEnvio = () => {
     return precioEnvio
 }
 
+//agregoDescuento, donde se hace la cuenta individual
 let precioDescuento
 
 const agregoDescuento = () => {
@@ -98,6 +212,7 @@ const agregoDescuento = () => {
     return precioDescuento
 }
 
+//Se calcula todo el resultado y se acutalizan los precios de cada input
 const calculototal = () => {
     if (credito.checked) {
         precioRecargo = cargoTarjeta()
