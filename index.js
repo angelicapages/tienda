@@ -1,7 +1,7 @@
 
 //QUERYSELECTORS
 const limpiando = document.querySelector("#botonLimpiado")
-const buscar = document.querySelector("#buscador")
+const filtroBusqueda = document.querySelector("#buscador")
 const checkboxes = document.querySelectorAll(".checkboxes")
 const cerrarMenuHamburguesa = document.querySelector(".cierre-menu-hamburguesa")
 const abrirMenuHamburguesa = document.querySelector(".abrir-menu-hamburguesa")
@@ -27,7 +27,7 @@ const tarjetas = document.querySelectorAll(".tarjeta")
 //BOTON LIMPIADO
 
 const filtrarlimpiado = () => {
-    buscar.value = " "
+    filtroBusqueda.value = " "
     for (let check of checkboxes) {
         console.log(check.checked)
         check.checked = false
@@ -41,8 +41,10 @@ limpiando.onclick = () => {
 
 //FILTROS
 
+// Pasa filtros TODOS
+
 const pasaFiltrosTodos = (card) => {
-    if (pasaFiltrosCheckBox(card) ) {
+    if (pasaFiltrosCheckBox(card) && pasaFiltrosInput(card)) {
         console.log("hola pepo")
         return true
     }
@@ -51,6 +53,8 @@ const pasaFiltrosTodos = (card) => {
         return false
     }
 }
+
+//Checkboxes PUNTAJE
 
 const hayAlgunCheckBoxChequeado = () => {
     for (let checkbox of checkboxes) {
@@ -91,46 +95,6 @@ const pasaFiltrosCheckBox = (card) => {
     }
 }
 
-// const hayAlgoEscritoEnElInput = () => {
-//     if (filtroBusqueda.value) {
-//         return true
-//     }
-//     else {
-//         return false
-//     }
-// }
-
-// const compararInputConTarjeta = (card) => {
-//     if (card.dataset.nombre.includes(filtroBusqueda.value.toLowerCase())) {
-//         return true
-//     }
-//     else {
-//         return false
-//     }
-// }
-
-// const pasaFiltrosInput = (card) => {
-//     if (hayAlgoEscritoEnElInput()) {
-//         if (compararInputConTarjeta(card)) {
-//             return true
-//         }
-//         else {
-//             return false
-//         }
-//     }
-//     else {
-//         return true
-//     }
-// }
-
-const ocultarTarjeta = (card) => {
-    return card.classList.add("hidden")
-}
-
-const mostrarTarjeta = (card) => {
-    return card.classList.remove("hidden")
-}
-
 const filtrarTarjetasPorCheckbox = () => {
     for (let card of tarjetas) {
         if (pasaFiltrosCheckBox(card) && pasaFiltrosTodos(card)) {
@@ -142,10 +106,73 @@ const filtrarTarjetasPorCheckbox = () => {
     }
 }
 
+//Escrito en el input
+
+const hayAlgoEscritoEnElInput = () => {
+    if (filtroBusqueda.value) {
+        return true
+    }
+    else {
+        return false
+    }
+}
+
+const compararInputConTarjeta = (card) => {
+    if (card.dataset.nombre.includes(filtroBusqueda.value.toLowerCase())) {
+        return true
+    }
+    else {
+        return false
+    }
+}
+
+const pasaFiltrosInput = (card) => {
+    if (hayAlgoEscritoEnElInput()) {
+        if (compararInputConTarjeta(card)) {
+            return true
+        }
+        else {
+            return false
+        }
+    }
+    else {
+        return true
+    }
+}
+
+const filtrarTarjetasPorInput = () => {
+    for (let card of tarjetas) {
+        if (pasaFiltrosInput(card) && pasaFiltrosTodos(card)) {
+            mostrarTarjeta(card)
+        }
+        else {
+            ocultarTarjeta(card)
+        }
+    }
+}
+
+//Cambios de estilado
+
+const ocultarTarjeta = (card) => {
+    return card.classList.add("hidden")
+}
+
+const mostrarTarjeta = (card) => {
+    return card.classList.remove("hidden")
+}
+
+
+//ON INPUT
+
 for (let checkbox of checkboxes) {
     checkbox.oninput = () => {
         filtrarTarjetasPorCheckbox()
     }
+}
+
+filtroBusqueda.oninput = () => {
+    filtrarTarjetasPorInput()
+
 }
 
 // CERRAR Y ABRIR EL MENU HAMBURGUESA
