@@ -21,6 +21,7 @@ body {
 
 .hidden {
   display: none;
+
 }
 
 #menu-hamburguesa {
@@ -43,6 +44,7 @@ body {
   background-color: transparent;
 }
 .carro {
+
   overflow: scroll;
   height: 50%;
   display: flex;
@@ -193,6 +195,11 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+#recargo {
+  color: red;
+}
+
 #total {
   font-size: 30px;
   font-weight: bolder;

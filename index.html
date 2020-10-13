@@ -101,10 +101,10 @@
                     <div class="opciones-de-pago">
                         <h3>Opciones de pago</h3>
                         <form class="formulario-contador">
-                            <label><input type="radio" name="opciones-de-pago">Efectivo/Débito</label>
-                            <label><input type="radio" name="opciones-de-pago">Tarjeta de crédito</label>
-                            <label><input type="checkbox" name="opciones-de-pago">Necesito envío</label>
-                            <label><input type="checkbox" name="opciones-de-pago">Tengo tarjeta de descuento</label>
+                            <label><input type="radio" id="efectivo" class="formasDePago" name="opciones-de-pago">Efectivo/Débito</label>
+                            <label><input type="radio" id="credito" class="formasDePago" name="opciones-de-pago">Tarjeta de crédito</label>
+                            <label><input type="checkbox" id="envioChecked"  class="formasDePago" name="opciones-de-pago">Necesito envío</label>
+                            <label><input type="checkbox" id="descuentoChecked" class="formasDePago"  name="opciones-de-pago">Tengo tarjeta de descuento</label>
                         </form>
                     </div>
                 </div>
@@ -113,7 +113,10 @@
                         <h3>Resumen</h3>
                     </div>
                     <div class="cuentas">
-                        <p id="subtotal"> $55498</p>
+                        <h4>Recargo: <span id="recargo">0</span></h4>
+                        <h4>Descuento: <span id="descuento">0</span></h4>
+                        <h4>Envio: <span id="envio">0</span></h4>            
+                        <h4>Precio<span id="subtotal" data-precio="55498"> $55498</span></h4>
                         <p id="total"> $55498</p>
                     </div>
 
