@@ -124,6 +124,7 @@ body {
 }
 
 /*CONTADOR CARRITO*/
+
 .contador-compra {
   z-index: 5;
   position: fixed;
@@ -309,10 +310,10 @@ main {
 
 .control-productos {
   display: flex;
+  margin-right: 40px;
   justify-content: space-between;
   background-color: white;
   padding: 20px;
-  margin-right: 10%;
 }
 
 .filtros {
@@ -369,7 +370,8 @@ main {
 }
 
 .tarjeta {
-  height: 400px;
+  width: 380px;
+  height: 440px;
   background-color: #ffffff;
   margin: 10px;
   margin-top: 30px;
@@ -391,8 +393,29 @@ main {
 
 h3 {
   text-align: center;
+
+}
+.estrellas-productos{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.descripcion-producto-tarjeta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.comprar-producto {
+  font-family: "Montserrat", sans-serif;
+  font-size: medium;
+  margin: 10px;
+  background-color:#f5f5f5;
+  height: 50px;
+  width: 350px;
+  border-radius: 5px;
+  border: none;
+}
 /*FOOTER*/
 
 footer {
