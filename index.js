@@ -23,6 +23,9 @@ const credito = document.querySelector("#credito")
 const envioSiNo = document.querySelector("#envioChecked")
 const tarjetaDescuento = document.querySelector("#descuentoChecked")
 const tarjetas = document.querySelectorAll(".tarjeta")
+const categorias = document.querySelectorAll(".categoria")
+
+console.log(categorias)
 
 //BOTON LIMPIADO
 
@@ -44,8 +47,7 @@ limpiando.onclick = () => {
 // Pasa filtros TODOS
 
 const pasaFiltrosTodos = (card) => {
-    if (pasaFiltrosCheckBox(card) && pasaFiltrosInput(card)) {
-        console.log("hola pepo")
+    if (pasaFiltrosCheckBox(card) && pasaFiltrosInput(card) && pasaFiltrosCategoria(card)) {
         return true
     }
     else {
@@ -79,7 +81,6 @@ const compararCheckBoxChequeado = (card) => {
     return false
 }
 
-
 const pasaFiltrosCheckBox = (card) => {
     if (hayAlgunCheckBoxChequeado()) {
         if (compararCheckBoxChequeado(card)) {
@@ -98,6 +99,57 @@ const pasaFiltrosCheckBox = (card) => {
 const filtrarTarjetasPorCheckbox = () => {
     for (let card of tarjetas) {
         if (pasaFiltrosCheckBox(card) && pasaFiltrosTodos(card)) {
+            mostrarTarjeta(card)
+        }
+        else {
+            ocultarTarjeta(card)
+        }
+    }
+}
+
+//checkboxes CATEGORÍA
+
+const hayAlgunaCategoriaChequeada = () => {
+    for (let categoria of categorias) {
+        if (categoria.checked) {
+            console.log("estoy chequeado")
+            return true
+        }
+    }
+    console.log("no está chequeado")
+    return false
+}
+
+const compararCategoriaChequeada = (card) => {
+    for (let categoria of categorias) {
+        if (categoria.checked) {
+            if (categoria.value === card.dataset.categoria) {
+                console.log("hay uno que coincide")
+                return true
+            }
+        }
+    }
+    return false
+}
+
+const pasaFiltrosCategoria = (card) => {
+    if (hayAlgunaCategoriaChequeada()) {
+        if (compararCategoriaChequeada(card)) {
+            console.log("Pasa filtros")
+            return true
+        }
+        else {
+            return false
+        }
+    }
+    else {
+        return true
+    }
+}
+
+const filtrarTarjetasPorCategoria = () => {
+    for (let card of tarjetas) {
+        if (pasaFiltrosCategoria(card) && pasaFiltrosTodos(card)) {
             mostrarTarjeta(card)
         }
         else {
@@ -175,6 +227,11 @@ filtroBusqueda.oninput = () => {
 
 }
 
+for (let categoria of categorias) {
+    categoria.oninput = () => {
+        filtrarTarjetasPorCategoria()
+    }
+}
 // CERRAR Y ABRIR EL MENU HAMBURGUESA
 
 abrirMenuHamburguesa.onclick = () => {
