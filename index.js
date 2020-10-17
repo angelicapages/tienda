@@ -34,9 +34,9 @@ let verComoGrilla = document.querySelector("#boton-vercomo-grilla")
 let verComoLista = document.querySelector("#boton-vercomo-lista")
 const productoTodo = document.querySelector("#producto-todo")
 const textoDescripcion = document.querySelectorAll(".texto-producto")
+let descripcionProducto = document.querySelectorAll(".descripcion-producto-tarjeta")
+let imagenesProductoLista = document.querySelectorAll(".imagen-de-producto")
 
-
-console.log(productoTodo)
 
 //BOTON LIMPIADO
 
@@ -48,6 +48,10 @@ const filtrarlimpiado = () => {
     for (let categoria of categorias) {
         categoria.checked = false
     }
+    for (let card of tarjetas) {
+        card.classList.remove("hidden")
+    }
+    cambiarCantidadDeProductosMostrados()
 }
 
 limpiando.onclick = () => {
@@ -263,14 +267,21 @@ const cambiandoVerComo = (verComo) => {
     if (verComo == false) {
         productoTodo.classList.remove("productos")
         productoTodo.classList.add("producto-lista")
+        for (let imagenLista of imagenesProductoLista) {
+            imagenLista.classList.remove("imagen-de-productos")
+        }
         for (let texto of textoDescripcion) {
             texto.classList.remove("hidden")
             texto.classList.add("texto-producto")
         }
     }
-    else if (verComo==true) {
+    else if (verComo == true) {
         productoTodo.classList.remove("producto-lista")
         productoTodo.classList.add("productos")
+        for (let imagenLista of imagenesProductoLista) {
+            imagenLista.classList.add("imagen-de-productos")
+        }
+
         for (let texto of textoDescripcion) {
             texto.classList.add("hidden")
             texto.classList.remove("texto-producto")
@@ -281,21 +292,21 @@ const cambiandoVerComo = (verComo) => {
 verComoGrilla.onclick = () => {
 
     let verComo = verComoGrilla
-    verComo=true
+    verComo = true
     cambiandoVerComo(verComo)
     return verComo
 }
 
 verComoLista.onclick = () => {
     let verComo = verComoGrilla
-    verComo=false
+    verComo = false
     cambiandoVerComo(verComo)
     return verComo
 }
 
-let verComo =verComoGrilla
-verComo=true
-cambiandoVerComo(verComo=true)
+let verComo = verComoGrilla
+verComo = true
+cambiandoVerComo(verComo = true)
 //MOSTRAR EN CARRITO EL SUBTOTAL
 
 

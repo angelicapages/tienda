@@ -21,8 +21,8 @@
     <div id="advertencia-carrito" class="hidden">
         <div class="advertenciaCarrito">
             <h2>Estas por vaciar tu carrito, ¿Quieres continuar?</h2>
-            <button class="cancelar-vaciar">Cancelar</button>
-            <button class="vaciar-carrito-seguro">Vaciar</button>
+            <button aria-label="cancelar el vaciado" class="cancelar-vaciar">Cancelar</button>
+            <button aria-label="vaciar el carrito" class="vaciar-carrito-seguro">Vaciar</button>
         </div>
     </div>
 
@@ -30,14 +30,15 @@
     <div id="menu-hamburguesa" class="hidden">
         <header class="titulo-carrito">
             <h2>Carrito</h2>
-            <button class="cierre-menu-hamburguesa"><i class="fas fa-times"></i></button>
+            <button aria-label="cerrar el carrito" class="cierre-menu-hamburguesa"><i class="fas fa-times"></i></button>
         </header>
-        <p>2 producto(s) agregado(s)</p>
+        <p aria-label="Cantidad de productos en el carrito" aria-live="assertive">2 producto(s) agregado(s)</p>
 
         <div class="carro">
             <article class="producto-dentro-carrito">
                 <div class="contenedor-carrito">
-                    <img id="celular-xiaomi" src="img/celulcar xiaomi.jpg">
+                    <img id="celular-xiaomi" src="img/celulcar xiaomi.jpg"
+                        alt=" Celular Xiaomi de mayor rendimiento. El procesador Qualcomm Snapdragon 665 de ocho núcleos, junto con la memoria RAM de 4 GB, te permitirán ejecutar varias aplicaciones al mismo tiempo, jugar y navegar con gran rapidez y sin inconvenientes. Tendrás una excelente experiencia con todas tus aplicaciones">
                     <div class="descripcion-producto-carrito">
                         <div class="nombre-carrito">
                             <h3>Celular Xiaomi</h3>
@@ -47,11 +48,14 @@
                         </div>
                         <div class="cantidad-precio">
                             <div class="cantidad-producto-carrito">
-                                <input class="input-de-carrito" type="number" value="1">
+                                <input class="input-de-carrito"
+                                    aria-label="Introduzca la cantidad de productos que se quiere llevar"
+                                    aria-live="assertive" type="number" value="1">
                                 </input>
                             </div>
                             <div class="precio-de-producto-carrito">
-                                <p class="precioCarritoProducto" data-precioCarrito="32999">$32999</p>
+                                <p class="precioCarritoProducto" data-precioCarrito="32999" aria-label="Precio $ 32999"
+                                    aria-live="assertive">$32999</p>
                             </div>
                         </div>
                     </div>
@@ -70,20 +74,24 @@
                         </div>
                         <div class="cantidad-precio">
                             <div class="cantidad-producto-carrito">
-                                <input class="input-de-carrito" type="number" value="1">
+                                <input class="input-de-carrito"
+                                    aria-label="Introduzca la cantidad de productos que se quiere llevar"
+                                    aria-live="assertive" type="number" value="1">
                                 </input>
                             </div>
                             <div class="precio-de-producto-carrito">
-                                <p class="precioCarritoProducto" data-precioCarrito="22499">$22499</p>
+                                <p class="precioCarritoProducto" data-precioCarrito="22499" aria-label="Precio $22499">
+                                    $22499</p>
                             </div>
                         </div>
                     </div>
             </article>
         </div>
-        <p class="subtotal-carrito">Subtotal: $55498 </p>
+        <p class="subtotal-carrito" aria-live="assertive" aria-label="Subtotal del precio: $55498">Subtotal: $55498 </p>
         <div class="botones-carrito">
-            <button class="comprar-carrito">Comprar</button>
-            <button class="vaciar-carrito">Vaciar</button>
+            <button class="comprar-carrito" aria-label="Comprar productos agregados al carrito">Comprar</button>
+            <button class="vaciar-carrito"
+                aria-label="Deshacer todos los productos agregados al carrito">Vaciar</button>
         </div>
     </div>
 
@@ -120,13 +128,16 @@
                         <h3>Opciones de pago</h3>
 
                         <label><input type="radio" id="efectivo" class="formasDePago" required="true"
-                                aria-required="true" name="opciones-de-pago">Efectivo/Débito</label>
-                        <label><input type="radio" id="credito" class="formasDePago" required="true"
+                                aria-required="true" aria-label="Opcion de pago con débito o efectivo"
+                                aria-live="assertive" name="opciones-de-pago">Efectivo/Débito</label>
+                        <label><input type="radio" id="credito" class="formasDePago"
+                                aria-label="Opción de pago con tarjeta de crédito" aria-live="assertive" required="true"
                                 aria-required="true" name="opciones-de-pago">Tarjeta
                             de crédito</label>
-                        <label><input type="checkbox" id="envioChecked" class="formasDePago"
-                                name="opciones-de-pago">Necesito envío</label>
+                        <label><input type="checkbox" id="envioChecked" class="formasDePago" name="opciones-de-pago"
+                                aria-label="Opción de envío" aria-live="assertive">Necesito envío</label>
                         <label><input type="checkbox" id="descuentoChecked" class="formasDePago"
+                                aria-label="Seleccione esta opcion si tiene tarjeta de descuento" aria-live="assertive"
                                 name="opciones-de-pago">Tengo tarjeta de descuento</label>
 
                     </div>
@@ -136,18 +147,22 @@
                         <h3>Resumen</h3>
                     </div>
                     <div class="cuentas">
-                        <h4>Recargo: <span id="recargo">0</span></h4>
-                        <h4>Descuento: <span id="descuento">0</span></h4>
-                        <h4>Envio: <span id="envio">0</span></h4>
-                        <h4>Precio<span id="subtotal" data-precio="55498"> $55498</span></h4>
-                        <p id="total"> $55498</p>
+                        <h4 aria-label="Recargo agregado" aria-live="assertive">Recargo: <span id="recargo">0</span>
+                        </h4>
+                        <h4 aria-label="Descuento agregado al precio" aria-live="assertive">Descuento: <span
+                                id="descuento">0</span></h4>
+                        <h4 aria-label="Costo de envío" aria-live="assertive">Envio: <span id="envio">0</span></h4>
+                        <h4 aria-label="Precio de cada producto" aria-live="assertive">Precio<span id="subtotal"
+                                data-precio="55498"> $55498</span></h4>
+                        <p id="total" aria-label="Precio total que se debe pagar"> $55498</p>
                     </div>
 
                 </div>
             </div>
             <div class="botones-pago">
-                <button class="seguir-comprando">Seguir comprando</button>
-                <input type="submit" class="finalizar"></input>
+                <button class="seguir-comprando" aria-label="Devolverse al carrito y seguir comprando">Seguir
+                    comprando</button>
+                <input type="submit" aria-label="finalizar la compra" class="finalizar"></input>
                 </form>
             </div>
         </div>
@@ -156,18 +171,19 @@
     <!--ADVERTENCIA VACIAR CARRITO-->
 
     <!--OVERLAY-->
-    <div id="overlay" class="hidden">
+    <div id="overlay" class="hidden" aria-hidden="true">
     </div>
-    <div id="overlay2" class="hidden">
+    <div id="overlay2" class="hidden" aria-hidden="true">
     </div>
     <nav>
         <div class="top-bar">
             <div class="logo">
-                <p>Pepo shop</p>
+                <p aria-label="Bienvenido a Pepo Shop">Pepo shop</p>
             </div>
 
             <div class="carrito">
-                <button class="abrir-menu-hamburguesa"> <i class="fas fa-shopping-cart"></i>Carrito (0 items)</button>
+                <button class="abrir-menu-hamburguesa" aria-label="carrito de compras" aria-live="assertive">
+                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>Carrito (2 items)</button>
             </div>
         </div>
     </nav>
@@ -182,7 +198,7 @@
 
                 <h1>ELECTRÓNICA</h1>
             </div>
-            <div class="overlay-banner">
+            <div class="overlay-banner" aria-hidden="true">
             </div>
         </div>
     </section>
@@ -197,49 +213,76 @@
                 <aside>
                     <div class="titulo-de-filtros">
                         <p class="titulos-filtros">FILTROS</p>
-                        <button id="botonLimpiado">
+                        <button id="botonLimpiado" aria-label="deshacer todos los filtros, incluhídos el buscador">
                             <i class="fas fa-trash"></i> Limpiar
                         </button>
                     </div>
 
                     <p class="titulos-filtros">Búsqueda</p>
-                    <input type="text" name="buscador-de-filtros" id="buscador" />
+                    <input type="text" name="buscador-de-filtros" id="buscador" aria-label="Buscador de productos">
 
                     <p class="titulos-filtros">Categoría</p>
                     <div class="categorías-de-filtros">
-                        <label><input type="checkbox" name="categoría" class="categoria" value="consolas" /> Consolas
+                        <label><input type="checkbox" name="categoría" class="categoria" value="consolas"
+                                aria-live="assertive"
+                                aria-label="Seleccione aquí si quiere ver unicamente la categoría Consolas" />
+                            Consolas
                         </label>
-                        <label><input type="checkbox" name="categoría" class="categoria" value="notebooks" />Notebooks
+                        <label><input type="checkbox" name="categoría" class="categoria" value="notebooks"
+                                aria-live="assertive"
+                                aria-label="Seleccione aquí si quiere ver unicamente la categoría Notebooks" />Notebooks
                         </label>
-                        <label><input type="checkbox" name="categoría" class="categoria" value="camaras" />Cámaras
+                        <label><input type="checkbox" name="categoría" class="categoria" value="camaras"
+                                aria-live="assertive"
+                                aria-label="Seleccione aquí si quiere ver unicamente la categoría cámaras" />Cámaras
                         </label>
-                        <label><input type="checkbox" name="categoría" class="categoria" value="celulares" />Celulares
+                        <label><input type="checkbox" name="categoría" class="categoria" value="celulares"
+                                aria-live="assertive"
+                                aria-label="Seleccione aquí si quiere ver unicamente la categoría Celulares" />Celulares
                         </label>
-                        <label><input type="checkbox" name="categoría" class="categoria" value="accesorios" />Accesorios
+                        <label><input type="checkbox" name="categoría" class="categoria" value="accesorios"
+                                aria-live="assertive"
+                                aria-label="Seleccione aquí si quiere ver unicamente la categoría Accesorios" />Accesorios
                         </label>
                     </div>
 
                     <p class="titulos-filtros">Puntaje</p>
                     <div class="puntaje-de-filtros">
-                        <label><input type="checkbox" name="puntaje" class="checkboxes" value="5" />
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                class="fas fa-star"></i><i class="fas fa-star"></i> (5)
+                        <label><input type="checkbox" name="puntaje" class="checkboxes" aria-live="assertive"
+                                aria-label="Seleccione aquí si quiere ver unicamente el puntaje de 5 estrellas"
+                                value="5" />
+                            <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star"
+                                aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i
+                                class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star"
+                                aria-hidden="true"></i> (5)
                         </label>
-                        <label><input type="checkbox" name="puntaje" class="checkboxes" value="4" />
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                class="fas fa-star"></i><i class="far fa-star"></i> (4)
+                        <label><input type="checkbox" name="puntaje" class="checkboxes" value="4" aria-live="assertive"
+                                aria-label="Seleccione aquí si quiere ver unicamente el puntaje de 4 estrellas" />
+                            <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star"
+                                aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i
+                                class="fas fa-star" aria-hidden="true"></i><i class="far fa-star"
+                                aria-hidden="true"></i> (4)
                         </label>
-                        <label><input type="checkbox" name="puntaje" class="checkboxes" value="3" />
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                class="far fa-star"></i><i class="far fa-star"></i>(3)
+                        <label><input type="checkbox" name="puntaje" class="checkboxes" value="3" aria-live="assertive"
+                                aria-label="Seleccione aquí si quiere ver unicamente el puntaje de 3 estrellas" />
+                            <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star"
+                                aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i
+                                class="far fa-star" aria-hidden="true"></i><i class="far fa-star"
+                                aria-hidden="true"></i>(3)
                         </label>
-                        <label><input type="checkbox" name="puntaje" class="checkboxes" value="2" />
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i
-                                class="far fa-star"></i><i class="far fa-star"></i> (2)
+                        <label><input type="checkbox" name="puntaje" class="checkboxes" value="2" aria-live="assertive"
+                                aria-label="Seleccione aquí si quiere ver unicamente el puntaje de 2 estrellas" />
+                            <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star"
+                                aria-hidden="true"></i><i class="far fa-star" aria-hidden="true"></i><i
+                                class="far fa-star" aria-hidden="true"></i><i class="far fa-star"
+                                aria-hidden="true"></i> (2)
                         </label>
-                        <label><input type="checkbox" name="puntaje" class="checkboxes" value="1" />
-                            <i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i
-                                class="far fa-star"></i><i class="far fa-star"></i> (1)
+                        <label><input type="checkbox" name="puntaje" class="checkboxes" value="1" aria-live="assertive"
+                                aria-label="Seleccione aquí si quiere ver unicamente el puntaje de 1 estrellas" />
+                            <i class="fas fa-star" aria-hidden="true"></i><i class="far fa-star"
+                                aria-hidden="true"></i><i class="far fa-star" aria-hidden="true"></i><i
+                                class="far fa-star" aria-hidden="true"></i><i class="far fa-star"
+                                aria-hidden="true"></i> (1)
                         </label>
                     </div>
                 </aside>
@@ -248,21 +291,25 @@
             <div class="lista-productos">
                 <header class="control-productos">
                     <div class="contenedor-cantidad-productos">
-                        <p id="cantidad-de-productos">Mostrando 12 producto(s) de 12</p>
+                        <p id="cantidad-de-productos" aria-live="polite">Mostrando 12 producto(s) de 12</p>
                     </div>
                     <div class="control">
-                        <p class="control"> Ver como</p><button id="boton-vercomo-grilla"><i
-                                class="fas fa-grip-horizontal"></i></button> <button id="boton-vercomo-lista"><i
+                        <p class="control"> Ver como</p><button id="boton-vercomo-grilla"
+                            aria-label="Botón para ver los productos con una grilla"><i
+                                class="fas fa-grip-horizontal"></i></button> <button id="boton-vercomo-lista"
+                            aria-label="Botón para ver los productos como una lista, la cual añade una descripción de cada producto"><i
                                 class="fas fa-list"></i></button>
                     </div>
                 </header>
 
                 <div id="producto-todo" class="productos">
-
                     <article class="tarjeta" data-puntaje="3" data-nombre="celular xiaomi" data-categoria="celulares">
+
                         <div class="imagen-de-producto">
-                            <img class="imagen-producto" src="img/celulcar xiaomi.jpg">
+                            <img class="imagen-producto" src="img/celulcar xiaomi.jpg"
+                                alt="El celular Xiaomi visto desde el frente y desde atrás. SU parte trasera es liza y pulida, de color azul oscuro, contiene en la parte superior central cuatro cámaras y un flash debajo de ellas">
                         </div>
+
                         <div class="descripcion-producto-tarjeta">
                             <h3>Celular Xiaomi</h3>
                             <p data-precio="4999">$ 4999</p>
@@ -270,22 +317,23 @@
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                     class="far fa-star"></i> <i class="far fa-star"></i>
                             </div>
-                            <div class="texto-producto">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
-                                    temporibus
-                                    fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
-                                    suscipit.
-                                </p>
-                            </div>
-                            <button class="comprar-producto">Compra</button>
-
                         </div>
+                        <div class="texto-producto">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
+                                temporibus
+                                fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
+                                suscipit.
+                            </p>
+                        </div>
+                        <button class="comprar-producto">Compra</button>
+
                     </article>
 
                     <article class="tarjeta" data-puntaje="5" data-nombre="playstation 4" data-categoria="consolas">
+
                         <div class="imagen-de-producto">
-                            <img class="imagen-producto" src="img/ps4.jpg">
+                            <img class="imagen-producto" src="img/ps4.jpg" alt="paquete de la Playstation 4 blanca">
                         </div>
                         <div class="descripcion-producto-tarjeta">
                             <h3>PlayStation 4</h3>
@@ -294,247 +342,312 @@
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                     class="fas fa-star"></i><i class="fas fa-star"></i>
                             </div>
-                            <div class="texto-producto">
-                                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
-                                    temporibus
-                                    fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
-                                    suscipit.
-                                </p>
-                            </div>
-                            <button class="comprar-producto">Compra</button>
                         </div>
+                        <div class="texto-producto">
+                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
+                                temporibus
+                                fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
+                                suscipit.
+                            </p>
+                        </div>
+                        <button class="comprar-producto">Compra</button>
+
                     </article>
 
                     <article class="tarjeta" data-puntaje="2" data-nombre="cámara nikon" data-categoria="camaras">
+
                         <div class="imagen-de-producto">
-                            <img class="imagen-producto" src="img/camara nikon.jpg">
+                            <img class="imagen-producto" src="img/camara nikon.jpg"
+                                alt="Cámara Nikon D5600 y un lente versátil de kit de NIKKOR ">
                         </div>
+
                         <div class="descripcion-producto-tarjeta">
                             <h3>Cámara Nikon</h3>
-                            <p data-precio="4999">$ 4999</p>
+                            <p data-precio="4999" aria-label="Precio $ 4999">$ 4999</p>
                             <div class="estrellas-productos">
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i
                                     class="far fa-star"></i><i class="far fa-star"></i>
                             </div>
-                            <div class="texto-producto">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
-                                    temporibus
-                                    fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
-                                    suscipit.
-                                </p>
-                            </div>
-                            <button class="comprar-producto">Compra</button>
                         </div>
+                        <div class="texto-producto">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
+                                temporibus
+                                fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
+                                suscipit.
+                            </p>
+                        </div>
+                        <button class="comprar-producto">Compra</button>
+
                     </article>
 
                     <article class="tarjeta" data-puntaje="3" data-nombre="headphones sony" data-categoria="accesorios">
+
                         <div class="imagen-de-producto">
-                            <img class="imagen-producto" src="img/headphones_sony-removebg-preview.png">
+
+                            <img class="imagen-producto" src="img/headphones_sony-removebg-preview.png"
+                                alt="Un auricular​ es un transductor que recibe una señal eléctrica originada desde una fuente electrónica y que por su diseño permite colocar cerca de los oídos unos altavoces para generar ondas sonoras audibles.​ ">
+
                         </div>
                         <div class="descripcion-producto-tarjeta">
                             <h3>Headphones Sony</h3>
-                            <p data-precio="4999">$ 4999</p>
+                            <p data-precio="4999" aria-label="Precio $ 4999">$ 4999</p>
                             <div class="estrellas-productos">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                    class="far fa-star"></i> <i class="far fa-star"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star"
+                                    aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i
+                                    class="far fa-star" aria-hidden="true"></i> <i class="far fa-star"
+                                    aria-hidden="true"></i>
+
                             </div>
-                            <div class="texto-producto">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
-                                    temporibus
-                                    fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
-                                    suscipit.
-                                </p>
-                            </div>
-                            <button class="comprar-producto">Compra</button>
                         </div>
+                        <div class="texto-producto">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
+                                temporibus
+                                fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
+                                suscipit.
+                            </p>
+                        </div>
+                        <button class="comprar-producto">Compra</button>
+
+
                     </article>
+
 
                     <article class="tarjeta" data-puntaje="5" data-nombre="nintendo switch" data-categoria="consolas">
                         <div class="imagen-de-producto">
-                            <img class="imagen-producto" src="img/nintendo switch.jpg">
+
+                            <img class="imagen-producto" src="img/nintendo switch.jpg"
+                                alt="Nintendo considera a Switch una consola híbrida. Se puede utilizar como consola de sobremesa con la unidad principal insertada en una estación de acoplamiento para conectarla con un televisor. Alternativamente, puede ser extraída de la base y utilizada de forma similar a una tableta a través de su pantalla táctil LCD, o colocada sobre una superficie gracias a su soporte plástico integrado siendo así visible por varios jugadores.">
+
                         </div>
                         <div class="descripcion-producto-tarjeta">
                             <h3>Nintendo Switch</h3>
-                            <p data-precio="4999">$ 4999</p>
+                            <p data-precio="4999" aria-label="Precio $ 4999">$ 4999</p>
                             <div class="estrellas-productos">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star"
+                                    aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i
+                                    class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star"
+                                    aria-hidden="true"></i>
                             </div>
-                            <div class="texto-producto">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
-                                    temporibus
-                                    fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
-                                    suscipit.
-                                </p>
-                            </div>
-                            <button class="comprar-producto">Compra</button>
                         </div>
+                        <div class="texto-producto">
+                            <p data-precio="4999">$ 4999</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
+                                temporibus
+                                fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
+                                suscipit.
+                            </p>
+                        </div>
+                        <button class="comprar-producto">Compra</button>
+
+
                     </article>
 
                     <article class="tarjeta" data-puntaje="1" data-nombre="notebook asus" data-categoria="notebooks">
+
                         <div class="imagen-de-producto">
-                            <img class="imagen-producto" src="img/notebook_asus-removebg-preview.png">
+
+                            <img class="imagen-producto" src="img/notebook_asus-removebg-preview.png"
+                                alt=". ASUS VivoBook 15 X540UA. La laptop ideal para trabajar y jugar. Con procesador Intel® Core™ i5 de 8va generación y tecnologías exclusivas de ASUS">
+
                         </div>
                         <div class="descripcion-producto-tarjeta">
                             <h3>Notebook ASUS</h3>
-                            <p data-precio="4999">$ 4999</p>
+                            <p data-precio="4999" aria-label="Precio $ 4999">$ 4999</p>
                             <div class="estrellas-productos">
-                                <i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i
-                                    class="far fa-star"></i><i class="far fa-star"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i><i class="far fa-star"
+                                    aria-hidden="true"></i><i class="far fa-star" aria-hidden="true"></i><i
+                                    class="far fa-star" aria-hidden="true"></i><i class="far fa-star"></i>
                             </div>
-                            <div class="texto-producto">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
-                                    temporibus
-                                    fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
-                                    suscipit.
-                                </p>
-                            </div>
-                            <button class="comprar-producto">Compra</button>
                         </div>
+                        <div class="texto-producto">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
+                                temporibus
+                                fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
+                                suscipit.
+                            </p>
+                        </div>
+                        <button class="comprar-producto">Compra</button>
+
                     </article>
 
                     <article class="tarjeta" data-puntaje="3" data-nombre="notebook msi" data-categoria="notebooks">
+
                         <div class="imagen-de-producto">
-                            <img class="imagen-producto" src="img/notebook_msi-removebg-preview.png">
+                            <img class="imagen-producto" src="img/notebook_msi-removebg-preview.png"
+                                alt="Notebook MSI, modelo GL65 Leopard 10SFK-062 con procesador Intel">
                         </div>
+
                         <div class="descripcion-producto-tarjeta">
                             <h3>Notebook MSI</h3>
-                            <p data-precio="4999">$ 4999</p>
+                            <p data-precio="4999" aria-label="Precio $ 4999">$ 4999</p>
                             <div class="estrellas-productos">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                    class="far fa-star"></i> <i class="far fa-star"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star"
+                                    aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i
+                                    class="far fa-star" aria-hidden="true"></i> <i class="far fa-star"
+                                    aria-hidden="true"></i>
                             </div>
-                            <div class="texto-producto">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
-                                    temporibus
-                                    fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
-                                    suscipit.
-                                </p>
-                            </div>
-                            <button class="comprar-producto">Compra</button>
                         </div>
+                        <div class="texto-producto">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
+                                temporibus
+                                fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
+                                suscipit.
+                            </p>
+                        </div>
+                        <button class="comprar-producto">Compra</button>
+
                     </article>
 
                     <article class="tarjeta" data-puntaje="2" data-nombre="headphones phillips"
                         data-categoria="accesorios">
+
                         <div class="imagen-de-producto">
-                            <img class="imagen-producto" src="img/headphones_phillips-removebg-preview.png">
+
+                            <img class="imagen-producto" src="img/headphones_phillips-removebg-preview.png"
+                                alt="Headphones phillips modelo SHL5000">
                         </div>
+
                         <div class="descripcion-producto-tarjeta">
                             <h3>Headphones Phillips</h3>
-                            <p data-precio="4999">$ 4999</p>
+                            <p data-precio="4999" aria-label="Precio $ 4999">$ 4999</p>
                             <div class="estrellas-productos">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i
-                                    class="far fa-star"></i><i class="far fa-star"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star"
+                                    aria-hidden="true"></i><i class="far fa-star" aria-hidden="true"></i><i
+                                    class="far fa-star" aria-hidden="true"></i><i class="far fa-star"
+                                    aria-hidden="true"></i>
                             </div>
-                            <div class="texto-producto">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
-                                    temporibus
-                                    fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
-                                    suscipit.
-                                </p>
-                            </div>
-                            <button class="comprar-producto">Compra</button>
                         </div>
+                        <div class="texto-producto">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
+                                temporibus
+                                fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
+                                suscipit.
+                            </p>
+                        </div>
+                        <button class="comprar-producto">Compra</button>
+
+
                     </article>
 
                     <article class="tarjeta" data-puntaje="4" data-nombre="macbook" data-categoria="notebooks">
+
                         <div class="imagen-de-producto">
-                            <img class="imagen-producto" src="img/macbook-removebg-preview.png">
+                            <img class="imagen-producto" src="img/macbook-removebg-preview.png"
+                                alt="Macbook 2.6GHz 6-Core Intel Core i7">
                         </div>
                         <div class="descripcion-producto-tarjeta">
                             <h3>Macbook</h3>
-                            <p data-precio="4999">$ 4999</p>
+                            <p data-precio="4999" aria-label="Precio $ 4999">$ 4999</p>
                             <div class="estrellas-productos">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                    class="fas fa-star"></i><i class="far fa-star"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star"
+                                    aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i
+                                    class="fas fa-star" aria-hidden="true"></i><i class="far fa-star"
+                                    aria-hidden="true"></i>
                             </div>
-                            <div class="texto-producto">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
-                                    temporibus
-                                    fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
-                                    suscipit.
-                                </p>
-                            </div>
-                            <button class="comprar-producto">Compra</button>
                         </div>
+                        <div class="texto-producto">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
+                                temporibus
+                                fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
+                                suscipit.
+                            </p>
+                        </div>
+                        <button class="comprar-producto">Compra</button>
+
                     </article>
 
                     <article class="tarjeta" data-puntaje="3" data-nombre="iphone" data-categoria="celulares">
+
                         <div class="imagen-de-producto">
-                            <img class="imagen-producto" src="img/iphone.jpg">
+                            <img class="imagen-producto" src="img/iphone.jpg"
+                                alt="Pantalla IPS de 4.7 Cámara trasera de 12Mpx. Cámara delantera de 5Mpx. Procesador Apple A9 de 1.84GHz con 2GB de RAM.Batería de 1715mAh. Memoria interna de 64GB. Con sensor de huella dactilar.">
                         </div>
                         <div class="descripcion-producto-tarjeta">
                             <h3>Iphone</h3>
-                            <p data-precio="4999">$ 4999</p>
+                            <p data-precio="4999" aria-label="Precio $ 4999">$ 4999</p>
                             <div class="estrellas-productos">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                    class="far fa-star"></i> <i class="far fa-star"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star"
+                                    aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i
+                                    class="far fa-star" aria-hidden="true"></i> <i class="far fa-star"
+                                    aria-hidden="true"></i>
                             </div>
-                            <div class="texto-producto">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
-                                    temporibus
-                                    fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
-                                    suscipit.
-                                </p>
-                            </div>
-                            <button class="comprar-producto">Compra</button>
                         </div>
+                        <div class="texto-producto">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
+                                temporibus
+                                fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
+                                suscipit.
+                            </p>
+                        </div>
+                        <button class="comprar-producto">Compra</button>
+
+
                     </article>
 
                     <article class="tarjeta" data-puntaje="4" data-nombre="xbox one" data-categoria="consolas">
+
                         <div class="imagen-de-producto">
-                            <img class="imagen-producto" src="img/xbox one.jpg">
+                            <img class="imagen-producto" src="img/xbox one.jpg"
+                                alt="Xbox One es la tercera videoconsola de sobremesa de la marca Xbox, producida por Microsoft. Forma parte de las videoconsolas de octava generación, fue presentada por Microsoft el 21 de mayo de 2013.">
                         </div>
                         <div class="descripcion-producto-tarjeta">
                             <h3>Xbox one</h3>
-                            <p data-precio="4999">$ 4999</p>
+                            <p data-precio="4999" aria-label="Precio $ 4999">$ 4999</p>
                             <div class="estrellas-productos">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                    class="fas fa-star"></i><i class="far fa-star"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star"
+                                    aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i
+                                    class="fas fa-star" aria-hidden="true"></i><i class="far fa-star"
+                                    aria-hidden="true"></i>
                             </div>
-                            <div class="texto-producto">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
-                                    temporibus
-                                    fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
-                                    suscipit.
-                                </p>
-                            </div>
-                            <button class="comprar-producto">Compra</button>
                         </div>
+                        <div class="texto-producto">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
+                                temporibus
+                                fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
+                                suscipit.
+                            </p>
+                        </div>
+                        <button class="comprar-producto">Compra</button>
+
+
                     </article>
 
                     <article class="tarjeta" data-puntaje="5" data-nombre="mouse gamer" data-categoria="accesorios">
+
                         <div class="imagen-de-producto">
-                            <img class="imagen-producto" src="img/mouse gamer.jpg">
+                            <img class="imagen-producto" src="img/mouse gamer.jpg"
+                                alt="Superior 16000 DPI para un rendimiento increíblemente rápido. 50 millones de clics con conmutadores premium de alta durabilidad. 11 botones programables. Requisitos del sistema Windows 7, 8, 10">
                         </div>
                         <div class="descripcion-producto-tarjeta">
                             <h3>Mouse gamer</h3>
-                            <p data-precio="4999">$ 4999</p>
+                            <p data-precio="4999" aria-label="Precio $ 4999">$ 4999</p>
                             <div class="estrellas-productos">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star"
+                                    aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i
+                                    class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star"
+                                    aria-hidden="true"></i>
                             </div>
-                            <div class="texto-producto">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
-                                    temporibus
-                                    fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
-                                    suscipit.
-                                </p>
-                            </div>
-                            <button class="comprar-producto">Compra</button>
                         </div>
+                        <div class="texto-producto">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
+                                temporibus
+                                fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
+                                suscipit.
+                            </p>
+                        </div>
+                        <button class="comprar-producto">Compra</button>
+
                     </article>
                 </div>
         </main>

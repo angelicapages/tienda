@@ -416,10 +416,13 @@ main {
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  background-color: #ffffff;
   margin-top: 30px;
 }
 
+.texto-producto{
+  display: flex;
+  flex-direction: row;
+}
 #boton-vercomo-grilla {
   background-color: transparent;
   border: none;
@@ -443,6 +446,15 @@ main {
   padding: 5px;
 }
 
+.tarjeta-lista{
+  display: flex;
+  flex-direction: row;
+  width: 1000px;
+
+  background-color: #ffffff;
+  padding: 5px;
+}
+
 .imagen-de-producto {
   display: flex;
   justify-content: center;
@@ -452,6 +464,13 @@ main {
   overflow: hidden;
 }
 
+.imagen-de-producto-lista {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 250px;
+
+}
 .imagen-producto {
   height: 250px;
 }
