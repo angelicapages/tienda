@@ -24,15 +24,15 @@ const envioSiNo = document.querySelector("#envioChecked")
 const tarjetaDescuento = document.querySelector("#descuentoChecked")
 const tarjetas = document.querySelectorAll(".tarjeta")
 const categorias = document.querySelectorAll(".categoria")
+const cantidadDeProductos = document.querySelector("#cantidad-de-productos")
 
-console.log(categorias)
+console.log(cantidadDeProductos)
 
 //BOTON LIMPIADO
 
 const filtrarlimpiado = () => {
     filtroBusqueda.value = " "
     for (let check of checkboxes) {
-        console.log(check.checked)
         check.checked = false
     }
 
@@ -47,11 +47,12 @@ limpiando.onclick = () => {
 // Pasa filtros TODOS
 
 const pasaFiltrosTodos = (card) => {
+
     if (pasaFiltrosCheckBox(card) && pasaFiltrosInput(card) && pasaFiltrosCategoria(card)) {
+        cambiarCantidadDeProductosMostrados()
         return true
     }
     else {
-        console.log("no")
         return false
     }
 }
@@ -61,11 +62,11 @@ const pasaFiltrosTodos = (card) => {
 const hayAlgunCheckBoxChequeado = () => {
     for (let checkbox of checkboxes) {
         if (checkbox.checked) {
-            console.log("estoy chequeado")
+
             return true
         }
     }
-    console.log("no está chequeado")
+
     return false
 }
 
@@ -73,7 +74,7 @@ const compararCheckBoxChequeado = (card) => {
     for (let checkbox of checkboxes) {
         if (checkbox.checked) {
             if (checkbox.value === card.dataset.puntaje) {
-                console.log("hay uno que coincide")
+
                 return true
             }
         }
@@ -84,7 +85,7 @@ const compararCheckBoxChequeado = (card) => {
 const pasaFiltrosCheckBox = (card) => {
     if (hayAlgunCheckBoxChequeado()) {
         if (compararCheckBoxChequeado(card)) {
-            console.log("Pasa filtros")
+
             return true
         }
         else {
@@ -112,11 +113,11 @@ const filtrarTarjetasPorCheckbox = () => {
 const hayAlgunaCategoriaChequeada = () => {
     for (let categoria of categorias) {
         if (categoria.checked) {
-            console.log("estoy chequeado")
+
             return true
         }
     }
-    console.log("no está chequeado")
+
     return false
 }
 
@@ -124,7 +125,7 @@ const compararCategoriaChequeada = (card) => {
     for (let categoria of categorias) {
         if (categoria.checked) {
             if (categoria.value === card.dataset.categoria) {
-                console.log("hay uno que coincide")
+
                 return true
             }
         }
@@ -135,7 +136,7 @@ const compararCategoriaChequeada = (card) => {
 const pasaFiltrosCategoria = (card) => {
     if (hayAlgunaCategoriaChequeada()) {
         if (compararCategoriaChequeada(card)) {
-            console.log("Pasa filtros")
+
             return true
         }
         else {
@@ -219,19 +220,34 @@ const mostrarTarjeta = (card) => {
 for (let checkbox of checkboxes) {
     checkbox.oninput = () => {
         filtrarTarjetasPorCheckbox()
+
     }
 }
 
 filtroBusqueda.oninput = () => {
     filtrarTarjetasPorInput()
 
+
 }
 
 for (let categoria of categorias) {
     categoria.oninput = () => {
         filtrarTarjetasPorCategoria()
+
     }
 }
+
+//MOSTRAR CANTIDAD DE PRODUCTOS SELECCIONADOS
+
+const cambiarCantidadDeProductosMostrados = () => {
+    const tarjetasOcultas = document.querySelectorAll(".tarjeta.hidden")
+    console.log(tarjetasOcultas.length)
+    let cantidad = 12 - tarjetasOcultas.length
+        cantidadDeProductos.textContent = "Mostrando" + " " + cantidad + " " + "de 12 productos"
+
+}
+
+
 // CERRAR Y ABRIR EL MENU HAMBURGUESA
 
 abrirMenuHamburguesa.onclick = () => {
