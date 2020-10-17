@@ -42,7 +42,7 @@
                                 </input>
                             </div>
                             <div class="precio-de-producto-carrito">
-                                <p>$32999</p>
+                                <p class="precioCarritoProducto" data-precioCarrito="32999">$32999</p>
                             </div>
                         </div>
                     </div>
@@ -65,7 +65,7 @@
                                 </input>
                             </div>
                             <div class="precio-de-producto-carrito">
-                                <p>$22499</p>
+                                <p class="precioCarritoProducto" data-precioCarrito="22499">$22499</p>
                             </div>
                         </div>
                     </div>
@@ -78,6 +78,10 @@
         </div>
     </div>
 
+
+    <!--SEGUNDO CARRITO-->
+
+
     <div id="menu-hamburguesa2" class="hidden">
         <div class="contador-compra">
             <h2>Checkout</h2>
@@ -88,27 +92,34 @@
                     <div class="datos-personales">
                         <h3>Datos Personales</h3>
                         <div class="input-personales">
-                            <label>Nombre y apellido
-                                <input type="text" placeholder="p.ej Pepo Shop" class="input-datos-personales"></label>
+                            <form>
+                                <label>Nombre y apellido
+                                    <input type="text" required tabindex="0" placeholder="p.ej Pepo Shop"
+                                        class="input-datos-personales"></label>
+
                         </div>
                         <div class="input-personales">
                             <label>Gmail
-                                <input type="email" placeholder="p.ej PepoShop@gmail.com"
-                                    class="input-datos-personales"></label>
+                                <form>
+                                    <input type="email" required tabindex="0" placeholder="p.ej PepoShop@gmail.com"
+                                        class="input-datos-personales"></label>
+
                         </div>
+
                     </div>
                     <div class="opciones-de-pago">
                         <h3>Opciones de pago</h3>
-                        <form class="formulario-contador">
-                            <label><input type="radio" id="efectivo" class="formasDePago"
-                                    name="opciones-de-pago">Efectivo/Débito</label>
-                            <label><input type="radio" id="credito" class="formasDePago" name="opciones-de-pago">Tarjeta
-                                de crédito</label>
-                            <label><input type="checkbox" id="envioChecked" class="formasDePago"
-                                    name="opciones-de-pago">Necesito envío</label>
-                            <label><input type="checkbox" id="descuentoChecked" class="formasDePago"
-                                    name="opciones-de-pago">Tengo tarjeta de descuento</label>
-                        </form>
+
+                        <label><input type="radio" id="efectivo" class="formasDePago" required="true"
+                                aria-required="true" name="opciones-de-pago">Efectivo/Débito</label>
+                        <label><input type="radio" id="credito" class="formasDePago" required="true"
+                                aria-required="true" name="opciones-de-pago">Tarjeta
+                            de crédito</label>
+                        <label><input type="checkbox" id="envioChecked" class="formasDePago"
+                                name="opciones-de-pago">Necesito envío</label>
+                        <label><input type="checkbox" id="descuentoChecked" class="formasDePago"
+                                name="opciones-de-pago">Tengo tarjeta de descuento</label>
+
                     </div>
                 </div>
                 <div class="contenedor-contador">
@@ -127,10 +138,20 @@
             </div>
             <div class="botones-pago">
                 <button class="seguir-comprando">Seguir comprando</button>
-                <button class="finalizar">Finalizar</button>
+                <input type="submit" class="finalizar"></input>
+                </form>
             </div>
         </div>
     </div>
+
+    <!--ADVERTENCIA VACIAR CARRITO-->
+
+    <div id="advertencia-carrito" class="hidden">
+        <h1>Estas por vaciar tu carrito, ¿Quieres continuar?</h1>
+        <button class="cancelar-vaciar">Cancelar</button>
+        <button class="vaciar-carrito-seguro">Vaciar</button>
+    </div>
+
 
     <!--OVERLAY-->
     <div id="overlay" class="hidden">
@@ -208,7 +229,7 @@
                         </label>
                         <label><input type="checkbox" name="puntaje" class="checkboxes" value="3" />
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                class="far fa-star"></i> <i class="far fa-star"></i>(3)
+                                class="far fa-star"></i><i class="far fa-star"></i>(3)
                         </label>
                         <label><input type="checkbox" name="puntaje" class="checkboxes" value="2" />
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i

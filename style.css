@@ -123,6 +123,7 @@ body {
   background-color: red;
 }
 
+
 /*CONTADOR CARRITO*/
 
 .contador-compra {
@@ -297,6 +298,33 @@ h1 {
   background-color: rgba(12, 12, 12, 0.1);
 }
 
+/*ADVERTENCIA VACIAR CARRITO*/
+
+.advertencia-vaciar-carrito{
+display: block;
+}
+
+.cancelar-vaciar{
+  font-family: "Montserrat", sans-serif;
+  font-size: medium;
+  margin: 5px;
+  background-color: transparent;
+  height: 50px;
+  width: 390px;
+  border-radius: 5px;
+  border-color: #f5f5f5;
+}
+.vaciar-carrito-seguro{
+font-family: "Montserrat", sans-serif;
+font-size: medium;
+margin: 5px;
+background-color: #73a942;
+color: #ffffff;
+height: 50px;
+width: 390px;
+border-radius: 5px;
+border: none;
+}
 /*SECCION PRINCIPAL*/
 
 /*FILTROS*/
@@ -427,4 +455,3 @@ footer {
 
 
 /*MEDIA QUERY*/
-

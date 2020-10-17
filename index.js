@@ -1,4 +1,3 @@
-
 //QUERYSELECTORS
 const limpiando = document.querySelector("#botonLimpiado")
 const filtroBusqueda = document.querySelector("#buscador")
@@ -9,6 +8,7 @@ const overlay = document.querySelector("#overlay")
 const menuHamburguesa = document.querySelector("#menu-hamburguesa")
 const hidden = document.querySelector(".hidden")
 const comprar = document.querySelector(".comprar-carrito")
+const vaciar = document.querySelector(".vaciar-carrito")
 const checkout = document.querySelector("#menu-hamburguesa2")
 const overlay2 = document.querySelector("#overlay2")
 const seguirComprando = document.querySelector(".seguir-comprando")
@@ -25,8 +25,13 @@ const tarjetaDescuento = document.querySelector("#descuentoChecked")
 const tarjetas = document.querySelectorAll(".tarjeta")
 const categorias = document.querySelectorAll(".categoria")
 const cantidadDeProductos = document.querySelector("#cantidad-de-productos")
+const subtotalCarrito = document.querySelector(".subtotal-carrito")
+const precioDeCadaProductoCarrito = document.querySelectorAll(".precioCarritoProducto")
+const advertenciaCarrito = document.querySelector("#advertencia-carrito")
+const vaciarCarrito= document.querySelector(".vaciar-carrito-seguro")
+const cancelarVaciar =document.querySelector(".cancelar-vaciar")
 
-console.log(cantidadDeProductos)
+console.log(advertenciaCarrito)
 
 //BOTON LIMPIADO
 
@@ -49,7 +54,7 @@ limpiando.onclick = () => {
 const pasaFiltrosTodos = (card) => {
 
     if (pasaFiltrosCheckBox(card) && pasaFiltrosInput(card) && pasaFiltrosCategoria(card)) {
-        cambiarCantidadDeProductosMostrados()
+
         return true
     }
     else {
@@ -220,20 +225,20 @@ const mostrarTarjeta = (card) => {
 for (let checkbox of checkboxes) {
     checkbox.oninput = () => {
         filtrarTarjetasPorCheckbox()
-
+        cambiarCantidadDeProductosMostrados()
     }
 }
 
 filtroBusqueda.oninput = () => {
     filtrarTarjetasPorInput()
-
+    cambiarCantidadDeProductosMostrados()
 
 }
 
 for (let categoria of categorias) {
     categoria.oninput = () => {
         filtrarTarjetasPorCategoria()
-
+        cambiarCantidadDeProductosMostrados()
     }
 }
 
@@ -241,11 +246,11 @@ for (let categoria of categorias) {
 
 const cambiarCantidadDeProductosMostrados = () => {
     const tarjetasOcultas = document.querySelectorAll(".tarjeta.hidden")
-    console.log(tarjetasOcultas.length)
-    let cantidad = 12 - tarjetasOcultas.length
+        let cantidad = 12 - tarjetasOcultas.length
         cantidadDeProductos.textContent = "Mostrando" + " " + cantidad + " " + "de 12 productos"
-
 }
+
+//MOSTRAR EN CARRITO EL SUBTOTAL
 
 
 // CERRAR Y ABRIR EL MENU HAMBURGUESA
@@ -270,6 +275,26 @@ comprar.onclick = () => {
 seguirComprando.onclick = () => {
     checkout.classList.add("hidden")
     overlay2.classList.add("hidden")
+}
+
+//ABRIR Y CERRAR VACIAR EL CARRITO
+
+vaciar.onclick = () => {
+    advertenciaCarrito.classList.remove("hidden")
+    overlay2.classList.remove("hidden")
+}
+
+cancelarVaciar.onclick = () => {
+    advertenciaCarrito.classList.add("hidden")
+    overlay2.classList.add("hidden")
+
+}
+
+vaciarCarrito.onclick = () => {
+    advertenciaCarrito.classList.add("hidden")
+    overlay2.classList.add("hidden")
+    overlay.classList.add("hidden")
+    menuHamburguesa.classList.add("hidden")
 }
 
 //CALCULOS DE PRECIO EN CARRITO
