@@ -18,10 +18,19 @@
 
     <!--CARRITO OCULTO-->
 
+    <div id="advertencia-carrito" class="hidden">
+        <div class="advertenciaCarrito">
+            <h2>Estas por vaciar tu carrito, ¿Quieres continuar?</h2>
+            <button class="cancelar-vaciar">Cancelar</button>
+            <button class="vaciar-carrito-seguro">Vaciar</button>
+        </div>
+    </div>
+
+
     <div id="menu-hamburguesa" class="hidden">
         <header class="titulo-carrito">
             <h2>Carrito</h2>
-            <button class="cierre-menu-hamburguesa"><i class="fas fa-times"></i> </button>
+            <button class="cierre-menu-hamburguesa"><i class="fas fa-times"></i></button>
         </header>
         <p>2 producto(s) agregado(s)</p>
 
@@ -146,13 +155,6 @@
 
     <!--ADVERTENCIA VACIAR CARRITO-->
 
-    <div id="advertencia-carrito" class="hidden">
-        <h1>Estas por vaciar tu carrito, ¿Quieres continuar?</h1>
-        <button class="cancelar-vaciar">Cancelar</button>
-        <button class="vaciar-carrito-seguro">Vaciar</button>
-    </div>
-
-
     <!--OVERLAY-->
     <div id="overlay" class="hidden">
     </div>
@@ -249,11 +251,13 @@
                         <p id="cantidad-de-productos">Mostrando 12 producto(s) de 12</p>
                     </div>
                     <div class="control">
-                        <p class="control"> Ver como</p>
+                        <p class="control"> Ver como</p><button id="boton-vercomo-grilla"><i
+                                class="fas fa-grip-horizontal"></i></button> <button id="boton-vercomo-lista"><i
+                                class="fas fa-list"></i></button>
                     </div>
                 </header>
 
-                <div class="productos">
+                <div id="producto-todo" class="productos">
 
                     <article class="tarjeta" data-puntaje="3" data-nombre="celular xiaomi" data-categoria="celulares">
                         <div class="imagen-de-producto">
@@ -265,6 +269,14 @@
                             <div class="estrellas-productos">
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                     class="far fa-star"></i> <i class="far fa-star"></i>
+                            </div>
+                            <div class="texto-producto">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
+                                    temporibus
+                                    fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
+                                    suscipit.
+                                </p>
                             </div>
                             <button class="comprar-producto">Compra</button>
 
@@ -282,6 +294,14 @@
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                     class="fas fa-star"></i><i class="fas fa-star"></i>
                             </div>
+                            <div class="texto-producto">
+                                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
+                                    temporibus
+                                    fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
+                                    suscipit.
+                                </p>
+                            </div>
                             <button class="comprar-producto">Compra</button>
                         </div>
                     </article>
@@ -296,6 +316,14 @@
                             <div class="estrellas-productos">
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i
                                     class="far fa-star"></i><i class="far fa-star"></i>
+                            </div>
+                            <div class="texto-producto">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
+                                    temporibus
+                                    fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
+                                    suscipit.
+                                </p>
                             </div>
                             <button class="comprar-producto">Compra</button>
                         </div>
@@ -312,6 +340,14 @@
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                     class="far fa-star"></i> <i class="far fa-star"></i>
                             </div>
+                            <div class="texto-producto">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
+                                    temporibus
+                                    fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
+                                    suscipit.
+                                </p>
+                            </div>
                             <button class="comprar-producto">Compra</button>
                         </div>
                     </article>
@@ -326,6 +362,14 @@
                             <div class="estrellas-productos">
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                     class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <div class="texto-producto">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
+                                    temporibus
+                                    fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
+                                    suscipit.
+                                </p>
                             </div>
                             <button class="comprar-producto">Compra</button>
                         </div>
@@ -342,6 +386,14 @@
                                 <i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i
                                     class="far fa-star"></i><i class="far fa-star"></i>
                             </div>
+                            <div class="texto-producto">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
+                                    temporibus
+                                    fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
+                                    suscipit.
+                                </p>
+                            </div>
                             <button class="comprar-producto">Compra</button>
                         </div>
                     </article>
@@ -356,6 +408,14 @@
                             <div class="estrellas-productos">
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                     class="far fa-star"></i> <i class="far fa-star"></i>
+                            </div>
+                            <div class="texto-producto">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
+                                    temporibus
+                                    fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
+                                    suscipit.
+                                </p>
                             </div>
                             <button class="comprar-producto">Compra</button>
                         </div>
@@ -373,6 +433,14 @@
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i
                                     class="far fa-star"></i><i class="far fa-star"></i>
                             </div>
+                            <div class="texto-producto">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
+                                    temporibus
+                                    fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
+                                    suscipit.
+                                </p>
+                            </div>
                             <button class="comprar-producto">Compra</button>
                         </div>
                     </article>
@@ -387,6 +455,14 @@
                             <div class="estrellas-productos">
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                     class="fas fa-star"></i><i class="far fa-star"></i>
+                            </div>
+                            <div class="texto-producto">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
+                                    temporibus
+                                    fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
+                                    suscipit.
+                                </p>
                             </div>
                             <button class="comprar-producto">Compra</button>
                         </div>
@@ -403,6 +479,14 @@
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                     class="far fa-star"></i> <i class="far fa-star"></i>
                             </div>
+                            <div class="texto-producto">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
+                                    temporibus
+                                    fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
+                                    suscipit.
+                                </p>
+                            </div>
                             <button class="comprar-producto">Compra</button>
                         </div>
                     </article>
@@ -417,6 +501,14 @@
                             <div class="estrellas-productos">
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                     class="fas fa-star"></i><i class="far fa-star"></i>
+                            </div>
+                            <div class="texto-producto">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
+                                    temporibus
+                                    fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
+                                    suscipit.
+                                </p>
                             </div>
                             <button class="comprar-producto">Compra</button>
                         </div>
@@ -433,9 +525,18 @@
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                     class="fas fa-star"></i><i class="fas fa-star"></i>
                             </div>
+                            <div class="texto-producto">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Accusamus obcaecati id dolorem repudiandae rerum autem corrupti dignissimos
+                                    temporibus
+                                    fuga similique eos laborum, dolores minima aperiam eaque sequi itaque atque
+                                    suscipit.
+                                </p>
+                            </div>
                             <button class="comprar-producto">Compra</button>
                         </div>
                     </article>
+                </div>
         </main>
 
 

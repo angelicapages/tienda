@@ -28,10 +28,15 @@ const cantidadDeProductos = document.querySelector("#cantidad-de-productos")
 const subtotalCarrito = document.querySelector(".subtotal-carrito")
 const precioDeCadaProductoCarrito = document.querySelectorAll(".precioCarritoProducto")
 const advertenciaCarrito = document.querySelector("#advertencia-carrito")
-const vaciarCarrito= document.querySelector(".vaciar-carrito-seguro")
-const cancelarVaciar =document.querySelector(".cancelar-vaciar")
+const vaciarCarrito = document.querySelector(".vaciar-carrito-seguro")
+const cancelarVaciar = document.querySelector(".cancelar-vaciar")
+let verComoGrilla = document.querySelector("#boton-vercomo-grilla")
+let verComoLista = document.querySelector("#boton-vercomo-lista")
+const productoTodo = document.querySelector("#producto-todo")
+const textoDescripcion = document.querySelectorAll(".texto-producto")
 
-console.log(advertenciaCarrito)
+
+console.log(productoTodo)
 
 //BOTON LIMPIADO
 
@@ -40,7 +45,9 @@ const filtrarlimpiado = () => {
     for (let check of checkboxes) {
         check.checked = false
     }
-
+    for (let categoria of categorias) {
+        categoria.checked = false
+    }
 }
 
 limpiando.onclick = () => {
@@ -246,10 +253,49 @@ for (let categoria of categorias) {
 
 const cambiarCantidadDeProductosMostrados = () => {
     const tarjetasOcultas = document.querySelectorAll(".tarjeta.hidden")
-        let cantidad = 12 - tarjetasOcultas.length
-        cantidadDeProductos.textContent = "Mostrando" + " " + cantidad + " " + "de 12 productos"
+    let cantidad = 12 - tarjetasOcultas.length
+    cantidadDeProductos.textContent = "Mostrando" + " " + cantidad + " " + "de 12 productos"
 }
 
+//VER COMO GRILLA
+
+const cambiandoVerComo = (verComo) => {
+    if (verComo == false) {
+        productoTodo.classList.remove("productos")
+        productoTodo.classList.add("producto-lista")
+        for (let texto of textoDescripcion) {
+            texto.classList.remove("hidden")
+            texto.classList.add("texto-producto")
+        }
+    }
+    else if (verComo==true) {
+        productoTodo.classList.remove("producto-lista")
+        productoTodo.classList.add("productos")
+        for (let texto of textoDescripcion) {
+            texto.classList.add("hidden")
+            texto.classList.remove("texto-producto")
+        }
+    }
+}
+
+verComoGrilla.onclick = () => {
+
+    let verComo = verComoGrilla
+    verComo=true
+    cambiandoVerComo(verComo)
+    return verComo
+}
+
+verComoLista.onclick = () => {
+    let verComo = verComoGrilla
+    verComo=false
+    cambiandoVerComo(verComo)
+    return verComo
+}
+
+let verComo =verComoGrilla
+verComo=true
+cambiandoVerComo(verComo=true)
 //MOSTRAR EN CARRITO EL SUBTOTAL
 
 
